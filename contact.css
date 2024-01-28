@@ -1,0 +1,33 @@
+.contact-container {
+  margin-top: -2px;
+  text-align: center;
+  font-size: 20pt;
+  display: flex;
+  border: 2px solid #000000;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.column {
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.rightB {
+  border-right: 2px solid #000000;
+}
+
+.bio-text {
+  margin-top: auto;
+  font-size: 18pt;
+}
+
+h3 {
+  line-height: 0.2;
+  text-decoration: underline;
+}
+
+ul {
+  text-align: left;
+}
