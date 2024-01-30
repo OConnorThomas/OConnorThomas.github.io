@@ -109,7 +109,7 @@
 
 .medium-font {
   font-size: 40pt;
-  line-height: 0.2;
+  line-height: 0.8;
 }
 
 .bounding-box {
@@ -171,7 +171,6 @@ h2 {
 
 h3 {
   font-size: 25pt;
-  line-height: 0.2;
   font-weight: bold;
   text-decoration: underline;
 }

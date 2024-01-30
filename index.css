@@ -4,7 +4,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  background: #e6e6e6;
 }
 
 header {
@@ -38,6 +38,10 @@ section {
   margin: 10px 0;
 }
 
+h1 {
+  font-size: 35pt;
+}
+
 h2 {
   margin-top: auto;
   font-size: 25pt;
@@ -45,6 +49,10 @@ h2 {
 
 h3 {
   font-size: 20pt;
+}
+
+ul {
+  font-size: 25pt;
 }
 
 .project {
@@ -64,7 +72,6 @@ footer {
   padding: 1rem;
   position: relative;
   bottom: 0;
-  width: 100%;
 }
 /* Button Styling */
 .button-container {
@@ -74,7 +81,6 @@ footer {
 }
 
 button {
-  text-decoration: underline;
   text-decoration-color: white;
   padding: 10px 20px;
   min-width: 150px;
