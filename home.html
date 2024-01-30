@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Link to external CSS files -->
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" type="text/css" href="home.css" />
-    <link rel="stylesheet" type="text/css" href="algorithms.css" />
+    <link rel="stylesheet" type="text/css" href="finances.css" />
     <!-- Link to external JS file -->
-    <script src="repo/js/algorithms.js"></script>
+    <script src="repo/js/finances.js"></script>
     <!-- Metadata -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,8 +23,8 @@
       type="FAS Square.png"
     />
   </head>
-
   <!-- Body -->
+
   <body>
     <!-- Header -->
     <div class="header-container">
@@ -56,17 +56,47 @@
     <!-- Page content -->
     <div class="bounding-box side">
       <div class="main centered">
-        <h3>Change This</h3>
+        <h3>Current Portfolio:</h3>
+        <div class="pie-chart"></div>
+        <br />
+        <div class="label">&nbsp;Stock Breakdown:</div>
+        <br />
+        <div class="investments">
+          JNJ : $15,000
+          <br />GE : $30,000 <br />AMZN : $10,000 <br />WMT : $45,000
+        </div>
       </div>
     </div>
     <div class="bounding-box middle">
       <div class="main large-font centered">
-        <b>Algorithms Content</b>
+        <b>Welcome Dashboard</b>
+        <div class="medium-font">
+          <p>Portfolio's performance:</p>
+          <img
+            src="repo/images/Stock Chart Placeholder.png"
+            alt="Stock Chart Example"
+          />
+          <p>Tracked stocks go underneath</p>
+        </div>
       </div>
     </div>
     <div class="bounding-box side">
       <div class="main centered">
-        <h3>In Post</h3>
+        <h3>Suggested Investments:</h3>
+        <div class="label">&nbsp;Current Suggestions:</div>
+        <br />
+        <div class="investments">
+          JNJ : $15,000 @ $200/share
+          <br />GE : $30,000 @ $100/share <br />AMZN : $10,000 @ $28/share
+        </div>
+        <br />
+        <div class="label">&nbsp;Previous Suggestions:</div>
+        <br />
+        <div class="investments">
+          WMT : $45,000 @ $50/share
+          <br />NVDA @ $500/share <br />RCL @ $45/share <br />TSLA @
+          $14,000/share
+        </div>
       </div>
     </div>
   </body>

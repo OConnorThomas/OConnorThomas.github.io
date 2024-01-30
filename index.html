@@ -1,103 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" type="text/css" href="index.css" />
-    <link rel="stylesheet" type="text/css" href="finances.css" />
-    <!-- Link to external JS file -->
-    <script src="repo/js/finances.js"></script>
-    <!-- Metadata -->
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Financial, Analysis, Software" />
-    <!-- Description / Title / Logo -->
-    <meta
-      name="description"
-      content="This program processes historical stock data and 
-              suggests an investment using a predictive algorithm."
-    />
-    <title>Financial Analysis Software</title>
-    <link
-      rel="icon"
-      href="repo/images/FAS Transparent.png"
-      type="FAS Square.png"
-    />
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
-  <!-- Body -->
-
   <body>
-    <!-- Header -->
-    <div class="header-container">
-      <div class="header-background"></div>
-      <div class="header-logo">
-        <a href="index.html">
-          <img src="repo/images/FAS.png" alt="FAS Logo" height="70" />
-        </a>
-      </div>
-      <div class="header-title">
-        <a href="index.html">
-          <h1>Financial Analysis Software</h1>
-        </a>
-      </div>
-      <a href="account.html" class="account-box">
-        Account<br />Sign-up | Login</a
-      >
-    </div>
+    <header>
+      <h1>Thomas O'Connor's Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#Websites">Websites</a></li>
+          <li><a href="#games">Games</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- Navigation bar -->
-    <div class="navbar">
-      <div class="navbar-box"><a href="index.html">Home</a></div>
-      <div class="navbar-box"><a href="analysis.html">Analysis</a></div>
-      <div class="navbar-box"><a href="finances.html">Finances</a></div>
-      <div class="navbar-box"><a href="algorithms.html">Algorithms</a></div>
-      <div class="navbar-box"><a href="contact.html">About/Contact</a></div>
-    </div>
+    <section id="Websites">
+      <h2>Websites</h2>
+      <!-- Add your webpages here -->
+      <div class="project">
+        <a href="home.html">
+          <img src="repo/images/FAS.png" alt="FAS Logo" height="140" />
+        </a>
+        <h3>Financial Analysis Software FAS</h3>
+        <p>
+          This WebApp processes historical stock data and suggests an investment
+          using a predictive algorithm. <br />
+          HTML and CSS visuals, PHP and SQL backend. Javascript #WIP#
+        </p>
+        <p>Honors Project for UMass Lowell, 2024</p>
+        <button onclick="location.href='home.html'">View Project</button>
+      </div>
+      <!-- Repeat for more projects -->
+    </section>
 
-    <!-- Page content -->
-    <div class="bounding-box side">
-      <div class="main centered">
-        <h3>Current Portfolio:</h3>
-        <div class="pie-chart"></div>
-        <br />
-        <div class="label">&nbsp;Stock Breakdown:</div>
-        <br />
-        <div class="investments">
-          JNJ : $15,000
-          <br />GE : $30,000 <br />AMZN : $10,000 <br />WMT : $45,000
-        </div>
+    <section id="games">
+      <h2>Games</h2>
+      <!-- Add your games here -->
+      <div class="project">
+        <img src="path_to_image.jpg" alt="Game Image" />
+        <h3>Game Title</h3>
+        <p>Game description goes here.</p>
+        <a href="game_link.html">Download Game Here</a>
       </div>
-    </div>
-    <div class="bounding-box middle">
-      <div class="main large-font centered">
-        <b>Welcome Dashboard</b>
-        <div class="medium-font">
-          <p>Portfolio's performance:</p>
-          <img
-            src="repo/images/Stock Chart Placeholder.png"
-            alt="Stock Chart Example"
-          />
-          <p>Tracked stocks go underneath</p>
-        </div>
+      <div class="project">
+        <img src="path_to_image.jpg" alt="Game Image" />
+        <h3>Game Title</h3>
+        <p>Game description goes here.</p>
+        <a href="game_link.html">Download Game Here</a>
       </div>
-    </div>
-    <div class="bounding-box side">
-      <div class="main centered">
-        <h3>Suggested Investments:</h3>
-        <div class="label">&nbsp;Current Suggestions:</div>
-        <br />
-        <div class="investments">
-          JNJ : $15,000 @ $200/share
-          <br />GE : $30,000 @ $100/share <br />AMZN : $10,000 @ $28/share
-        </div>
-        <br />
-        <div class="label">&nbsp;Previous Suggestions:</div>
-        <br />
-        <div class="investments">
-          WMT : $45,000 @ $50/share
-          <br />NVDA @ $500/share <br />RCL @ $45/share <br />TSLA @
-          $14,000/share
-        </div>
+      <div class="project">
+        <img src="path_to_image.jpg" alt="Game Image" />
+        <h3>Game Title</h3>
+        <p>Game description goes here.</p>
+        <a href="game_link.html">Download Game Here</a>
       </div>
-    </div>
+      <!-- Repeat for more games -->
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Feel free to reach out to me at
+        <a href="mailto:oconnordthomas@gmail.com">OConnorDThomas@gmail.com</a>.
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2024 Thomas O'Connor. All rights reserved.</p>
+    </footer>
   </body>
 </html>
