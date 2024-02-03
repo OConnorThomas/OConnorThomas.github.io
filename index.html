@@ -14,13 +14,25 @@
   </head>
   <body>
     <header>
-      <h1>Thomas O'Connor's Portfolio</h1>
+      <h1>
+        <a href="https://www.linkedin.com/in/oconnordthomas/"
+          >Thomas O'Connor's Portfolio</a
+        >
+      </h1>
       <nav>
         <ul>
-          <li><a href="#Webapps">Webapps</a></li>
-          <li><a href="#Coursework">Coursework</a></li>
-          <li><a href="#games">Games</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a class="button" href="#Webapps"><span>Webapps</span></a>
+          </li>
+          <li>
+            <a class="button" href="#Coursework"><span>Coursework</span></a>
+          </li>
+          <li>
+            <a class="button" href="#games"><span>Games</span></a>
+          </li>
+          <li>
+            <a class="button" href="#contact"><span>Contact</span></a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -39,7 +51,9 @@
           predictive algorithm. <br />
           HTML and CSS visuals, PHP and SQL backend. Javascript #WIP#
         </p>
-        <button onclick="location.href='home.html'">View Project</button>
+        <button class="button" onclick="location.href='home.html'">
+          <span>View Project</span>
+        </button>
       </div>
       <!-- Repeat for more projects -->
     </section>
@@ -49,18 +63,40 @@
       <!-- Add your webpages here -->
       <div class="project">
         <h3>C++ Undergrad Course Portfolio</h3>
-        <img src="repo\images\Checkers.gif" alt="Checkers Image" height="180" />
-        <img src="repo\images\Sokoban.gif" alt="Sokoban Image" height="180" />
-        <img src="repo\images\PTree.png" alt="PTree Output" height="180" />
+        <img
+          src="repo\images\Checkers.gif"
+          alt="Checkers Gif"
+          height="180"
+          class="clickable-image"
+          onclick="openPopup('repo\\images\\Checkers.gif', this.alt)"
+        />
+        <img
+          src="repo\images\Sokoban.gif"
+          alt="Sokoban Gif"
+          height="180"
+          class="clickable-image"
+          onclick="openPopup('repo\\images\\Sokoban.gif', this.alt)"
+        />
+        <img
+          src="repo\images\PTree.png"
+          alt="Pythagorean Tree Program Output"
+          height="180"
+          class="clickable-image"
+          onclick="openPopup('repo\\images\\PTree.png', this.alt)"
+        />
         <img
           src="repo\images\LFSR_Encrypt.png"
           alt="Encryption Image"
           height="180"
+          class="clickable-image"
+          onclick="openPopup('repo\\images\\LFSR_Encrypt.png', this.alt)"
         />
         <img
           src="repo\images\LFSR_Decrypt.png"
           alt="Decryption Image"
           height="180"
+          class="clickable-image"
+          onclick="openPopup('repo\\images\\LFSR_Decrypt.png', this.alt)"
         />
         <p>
           Computing 4 • Spring 2023 • UMass Lowell <br />
@@ -69,8 +105,11 @@
           Algorithmic predictive writer, Regex log parsing, and more! <br />
           Get the archive of my <u>source code</u> and development logs below:
         </p>
-        <button onclick="location.href='repo/apps/Comp4Proj.zip'">
-          Download Archive Here
+        <button
+          class="button"
+          onclick="location.href='repo/apps/Comp4Proj.zip'"
+        >
+          <span>Download Archive Here</span>
         </button>
       </div>
       <!-- Repeat for more projects -->
@@ -81,46 +120,84 @@
       <!-- Add your games here -->
       <div class="project">
         <h3>Pong</h3>
-        <img src="repo\images\Pong.gif" alt="Pong Game Gif" height="150" />
-        <img src="repo\images\Pong.png" alt="Pong Game Image" height="150" />
+        <img
+          src="repo\images\Pong.gif"
+          alt="Pong Game Gif"
+          height="150"
+          class="clickable-image"
+          onclick="openPopup('repo\\images\\Pong.gif', this.alt)"
+        />
+        <img
+          src="repo\images\Pong.png"
+          alt="Pong Game Image"
+          height="150"
+          class="clickable-image"
+          onclick="openPopup('repo\\images\\Pong.png', this.alt)"
+        />
         <p>
           The retro game we all know and love ♥. <br />
           Play against a formidable A.I. opponent or bring a friend and play
           1v1. 🎮📺🎮
         </p>
-        <button onclick="location.href='repo/apps/Pong.exe'">
-          Download Pong Here
+        <button class="button" onclick="location.href='repo/apps/Pong.exe'">
+          <span>Download Pong Here</span>
         </button>
       </div>
       <div class="project">
         <h3>Snake</h3>
-        <img src="repo\images\Snake.gif" alt="Pong Game Gif" height="150" />
-        <img src="repo\images\Snake.png" alt="Pong Game Image" height="150" />
+        <img
+          src="repo\images\Snake.gif"
+          alt="Snake Game Gif"
+          height="150"
+          class="clickable-image"
+          onclick="openPopup('repo\\images\\Snake.gif', this.alt)"
+        />
+        <img
+          src="repo\images\Snake.png"
+          alt="Snake Game Image"
+          height="150"
+          class="clickable-image"
+          onclick="openPopup('repo\\images\\Snake.png', this.alt)"
+        />
         <img
           src="repo\images\Snake Victory.png"
-          alt="Pong Game Image"
+          alt="Snake Victory Image"
           height="150"
+          class="clickable-image"
+          onclick="openPopup('repo\\images\\Snake Victory.png', this.alt)"
         />
         <p>
           Slither through the garden as you search for apples to grow your
           Snake! 🍎<br />
           Can you reach level 100? You move faster the longer you get! 🐍
         </p>
-        <button onclick="location.href='repo/apps/Snake.exe'">
-          Download Snake Here
+        <button class="button" onclick="location.href='repo/apps/Snake.exe'">
+          <span>Download Snake Here</span>
         </button>
       </div>
       <div class="project">
         <h3>Pacman</h3>
-        <img src="repo\images\Pacman.gif" alt="Pong Game Gif" height="150" />
-        <img src="repo\images\Pacman.png" alt="Pong Game Image" height="150" />
+        <img
+          src="repo\images\Pacman.gif"
+          alt="Pacman Game Gif"
+          height="150"
+          class="clickable-image"
+          onclick="openPopup('repo\\images\\Pacman.gif', this.alt)"
+        />
+        <img
+          src="repo\images\Pacman.png"
+          alt="Pacman Game Image"
+          height="150"
+          class="clickable-image"
+          onclick="openPopup('repo\\images\\Pacman.png', this.alt)"
+        />
         <p>
           Eat your way to Victory! 🍰 Munch on some tasty morsels while you
           avoid the ghosts. 👻 <br />
           Don't let them catch you! How high can you score? 📈💹
         </p>
-        <button onclick="location.href='repo/apps/Snake.exe'">
-          Download Pacman Here
+        <button class="button" onclick="location.href='repo/apps/Snake.exe'">
+          <span>Download Pacman Here</span>
         </button>
       </div>
       <!-- Repeat for more games -->
@@ -129,8 +206,9 @@
     <section id="contact">
       <h2>Contact</h2>
       <p>
-        <a href="https://www.linkedin.com/in/thomas-o-connor-56285b262/">
+        <a href="https://www.linkedin.com/in/oconnordthomas/">
           <img
+            class="profile-pic"
             src="repo/images/Thomas-Headshot.png"
             alt="User Profile picture"
             height="150"
@@ -140,17 +218,30 @@
         Feel free to reach out:
         <br />
         Email:
-        <a href="mailto:oconnordthomas@gmail.com">OConnorDThomas@gmail.com</a>.
+        <a class="my-color underline" href="mailto:oconnordthomas@gmail.com"
+          >OConnorDThomas@gmail.com</a
+        >
         <br />
         Linkedin:
-        <a href="https://www.linkedin.com/in/thomas-o-connor-56285b262/"
-          >TOConnor</a
+        <a
+          class="my-color underline"
+          href="https://www.linkedin.com/in/oconnordthomas/"
+          >OConnorDThomas</a
         >
       </p>
     </section>
 
-    <footer>
-      <p>&copy; 2024 Thomas O'Connor. All rights reserved.</p>
-    </footer>
+    <footer>&copy; 2024 Thomas O'Connor. All rights reserved.</footer>
+
+    <div id="popup-modal" class="modal">
+      <!-- The Close Button -->
+      <span class="close" onclick="closePopup()">&times;</span>
+      <!-- Popup Content (The Image) -->
+      <img class="modal-content" id="popup-image" />
+      <!-- Popup Caption -->
+      <div id="caption"></div>
+    </div>
+
+    <script src="repo/js/index.js"></script>
   </body>
 </html>

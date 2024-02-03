@@ -1,10 +1,26 @@
 /* Add some basic styling */
+:root {
+  --mycolor: #7a0000; /* You can set this to any color you want */
+  --background-color: #e6e6e6; /* Default light gray */
+  --text-color: #ffffff;
+  --section-color: ;
+}
+
+.my-color {
+  color: var(--mycolor);
+}
+
+.underline {
+  text-decoration: underline;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: Tahoma, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background: #e6e6e6;
+  background-color: var(--background-color);
+  transition: background-color 0.3s; /* Smooth transition for color change */
 }
 
 header {
@@ -28,41 +44,69 @@ header nav ul li {
   margin-right: 20px;
 }
 
-header nav ul li a {
-  color: #fff;
+a {
+  color: #ffffff;
   text-decoration: none;
+}
+
+p {
+  color: var(--text-color);
+  transition: color 0.3s;
 }
 
 section {
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px 10px;
+  text-align: center;
 }
 
 h1 {
   font-size: 35pt;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s;
 }
 
 h2 {
-  margin-top: auto;
+  margin-top: -10px;
   font-size: 25pt;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+h2:hover {
+  transition: 0.5s;
+  color: var(--mycolor);
 }
 
 h3 {
   font-size: 20pt;
+  color: var(--text-color);
+  transition: color 0.3s;
 }
 
 ul {
   font-size: 25pt;
+  color: var(--text-color);
+  transition: color 0.3s;
 }
 
 .project {
-  background: #fff;
+  background: var(--section-color);
+  transition: background 0.3s;
   padding: 1rem;
   margin-bottom: 1rem;
 }
 
 .project img {
   max-width: 100%;
+}
+
+.profile-pic {
+  border-radius: 50%; /* This will make it round, assuming the image is a square */
+  border: 3px solid var(--mycolor); /* Adjust the border thickness (3px) and replace 'your_color' with your color code or variable */
+  display: block;
+  margin: 0 auto; /* This centers the image in its container */
 }
 
 footer {
@@ -74,24 +118,144 @@ footer {
   bottom: 0;
 }
 /* Button Styling */
-.button-container {
-  margin-top: -20px;
-  display: inline-flex;
-  justify-content: center;
-}
-
-button {
-  text-decoration-color: white;
+.button {
   padding: 10px 20px;
-  min-width: 150px;
-  background-color: #466ab6;
-  color: white;
-  border-radius: 4px;
-  border: 3px solid black;
   font-size: 20pt;
-  margin: 0 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  min-width: 150px;
+  color: white; /* Default text color */
+  background-image: radial-gradient(circle, #000000 20%, var(--mycolor) 100%);
+  transition: background-image 0.3s, color 0.3s;
+  border-radius: 5px; /* Rounded corners */
+  position: relative; /* Required for pseudo-elements */
+  overflow: hidden; /* Required for pseudo-elements */
 }
 
-button:hover {
-  background-color: #792929;
+/* Pseudo-element for the animated pulse effect */
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, #444444 20%, var(--mycolor) 100%);
+  opacity: 0;
+  border-radius: 5px; /* Rounded corners */
+  transition: opacity 0.3s;
+  z-index: 0;
+}
+
+/* Text inside the button to ensure it's above the pseudo-element */
+.button span {
+  position: relative;
+  z-index: 1;
+}
+
+.button:hover::after {
+  opacity: 1; /* Show the pseudo-element */
+  animation: pulseAnimation 0.6s infinite; /* Faster animation */
+}
+
+/* Keyframes for the pulsing effect */
+@keyframes pulseAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 0.3; /* Less visible start */
+  }
+  50% {
+    transform: scale(1.1); /* More significant scaling */
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.3; /* Back to less visible */
+  }
+}
+
+.clickable-image {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.clickable-image:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.5s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsive Columns - Stacked on Small Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
 }
