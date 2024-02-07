@@ -156,7 +156,7 @@ footer {
 
 .button:hover::after {
   opacity: 1; /* Show the pseudo-element */
-  animation: pulseAnimation 0.6s infinite; /* Faster animation */
+  animation: pulseAnimation 0.6s infinite; /* animation */
 }
 
 /* Keyframes for the pulsing effect */

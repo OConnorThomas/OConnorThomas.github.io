@@ -1,3 +1,4 @@
+// Dynamic Dark Mode
 function updateBackgroundColor() {
   const hour = new Date().getHours();
   const isDaytime = hour > 6 && hour < 18;
@@ -10,6 +11,7 @@ function updateBackgroundColor() {
   document.documentElement.style.setProperty('--background-color', backgroundColor);
   document.documentElement.style.setProperty('--text-color', textColor);
 }
+// Dynamic Dark Mode
 
 // Listen for keydown events on the entire document
 document.addEventListener('keydown', function(event) {
