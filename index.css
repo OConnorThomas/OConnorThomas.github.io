@@ -1,6 +1,6 @@
 /* Add some basic styling */
 :root {
-  --mycolor: #7a0000; /* You can set this to any color you want */
+  --mycolor: #650000; /* You can set this to any color you want */
   --background-color: #e6e6e6; /* Default light gray */
   --text-color: #ffffff;
   --section-color: ;
@@ -21,6 +21,20 @@ body {
   padding: 0;
   background-color: var(--background-color);
   transition: background-color 0.3s; /* Smooth transition for color change */
+}
+
+.noscroll {
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.noscroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 header {

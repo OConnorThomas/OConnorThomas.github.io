@@ -47,6 +47,21 @@
   text-align: center;
 }
 
+/* Remove scroll bar */
+.noscroll {
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.noscroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 /* Navigation Bar Styling */
 .navbar {
   overflow: hidden;
