@@ -20,7 +20,7 @@ function signIn() {
   }
 
   if (isCorrectEmailAndPassword(loginEmail, loginPassword)) {
-    localStorage.setItem("_LOGGEDIN", true);
+    localStorage.setItem("_LOGGEDIN", 1);
     window.location.href = "test.html";
   } else {
     swal({

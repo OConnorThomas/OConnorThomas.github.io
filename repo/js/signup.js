@@ -37,7 +37,7 @@ function signUp() {
     swal({
       text: "Sign up successful",
     });
-    localStorage.setItem("_LOGGEDIN", true);
+    localStorage.setItem("_LOGGEDIN", 1);
     window.location.href = "test.html";
   } else {
     swal({
