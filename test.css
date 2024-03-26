@@ -6,7 +6,7 @@ body {
 /* Remove scroll bar */
 .noscroll {
   overflow-y: scroll;
-  background-color: black;
+  background-color: #222;
 }
 
 ::-webkit-scrollbar {
@@ -21,13 +21,16 @@ body {
 /* Navbar */
 nav {
   position: fixed;
-  width: 98%;
+  width: 100%;
+  height: 15%;
   top: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 0 1%;
+  z-index: 100;
+  background-color: #050505;
 }
 
 nav ul {
@@ -51,6 +54,7 @@ nav ul li a {
 }
 
 .left {
+  margin: 0 0 0 3%;
   display: flex;
   align-items: center;
 }
@@ -85,13 +89,129 @@ nav ul li a {
 
 .search-icon {
   position: absolute;
-  top: 50%;
-  right: 5px; /* Adjust spacing from the right */
+  top: 55%;
+  right: 10px; /* Adjust spacing from the right */
   transform: translateY(-50%);
   width: 30px; /* Adjust icon width */
   height: 30px; /* Adjust icon height */
+  background-color: transparent;
   background-image: url("repo/images/search\ icon.png"); /* Path to your search icon */
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
+  border-style: none;
+}
+
+.shadowed-text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* horizontal-offset vertical-offset blur-radius color */
+}
+
+.Title {
+  display: flex;
+  position: absolute;
+  color: #700000;
+  font-size: 280pt;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  line-height: 0%;
+}
+
+.nav-extension {
+  position: fixed;
+  top: 15%;
+  left: 0;
+  width: 100%;
+  height: 2%;
+  background-color: #050505;
+  z-index: -5;
+}
+
+.blurred-region {
+  position: fixed;
+  top: 13%;
+  left: 0;
+  width: 100%; /* Adjust the width as per your requirement */
+  height: 7%; /* Adjust the height as per your requirement */
+  overflow: hidden; /* Ensure the content doesn't overflow */
+  -webkit-backdrop-filter: blur(75px);
+  backdrop-filter: blur(75px);
+  /* Apply the gradient mask */
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  /* Ensure smooth transition between the blurred and non-blurred areas */
+  mask-mode: alpha;
+  z-index: 101;
+}
+
+.page-content {
+  position: absolute;
+  top: 17%;
+  left: 0%;
+  width: 100%; /* Adjust the width as per your requirement */
+  z-index: -1;
+}
+
+.white-borders {
+  width: 100%;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  list-style-type: none;
+  border: 3px solid white;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+}
+
+.accbox {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  width: 100%; /* Adjust the width as per your requirement */
+  z-index: -1;
+}
+
+.inputsForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  margin-top: 5%;
+}
+
+input {
+  width: 30%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  margin-top: 2%;
+}
+
+.accent-button {
+  padding: 2px 30px;
+  min-width: 150px;
+  background-color: #650000;
+  color: white;
+  border-radius: 10px;
+  margin-top: 2%;
+  font-size: 30pt;
+}
+
+.swal-button {
+  background-color: #650000;
+  border-color: #650000;
+}
+
+.swal-button:not([disabled]):hover {
+  background-color: #333;
+  border-color: #333;
 }
