@@ -8,7 +8,7 @@ function get_logged_in() {
 
 function updateContent() {
   if (get_logged_in() == 1) {
-    welcomeUser.innerHTML = userName;
+    welcomeUser.textContent = userName;
   } else {
     welcomeUser.textContent = "NULLuser";
   }
