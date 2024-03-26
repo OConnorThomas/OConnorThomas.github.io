@@ -53,6 +53,11 @@ nav ul li a {
   text-decoration: none;
 }
 
+.red-hover:hover {
+  color: rgba(256, 0, 0, 0.8);
+  text-shadow: 2px 2px 4px rgba(256, 0, 0, 0.5);
+}
+
 .left {
   margin: 0 0 0 3%;
   display: flex;
@@ -160,7 +165,18 @@ nav ul li a {
 
 .white-borders {
   width: 100%;
-  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  list-style-type: none;
+  border: 5px solid white;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+}
+
+.invert-wb {
+  width: 100%;
   text-decoration: none;
   color: white;
   list-style-type: none;
@@ -169,6 +185,13 @@ nav ul li a {
   background-color: black;
   color: white;
   box-sizing: border-box;
+}
+
+.invert-wb:hover {
+  background-color: white;
+  color: #050505;
+  border: 3px solid #a00000;
+  border-radius: 10px;
 }
 
 .inputsForm {
@@ -209,4 +232,8 @@ input {
 .swal-button:not([disabled]):hover {
   background-color: #333;
   border-color: #333;
+}
+
+.pad {
+  margin-right: 10px;
 }
