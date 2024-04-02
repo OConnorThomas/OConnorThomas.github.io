@@ -37,6 +37,7 @@ h2 {
   text-align: center;
   color: white;
   font-size: 30pt;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 /* Navbar */
@@ -164,7 +165,7 @@ nav ul li a {
   height: 7%; /* Adjust the height as per your requirement */
   overflow: hidden; /* Ensure the content doesn't overflow */
   -webkit-backdrop-filter: blur(75px);
-  backdrop-filter: blur(75px);
+  backdrop-filter: blur(15px);
   /* Apply the gradient mask */
   mask-image: linear-gradient(
     to bottom,
@@ -178,7 +179,12 @@ nav ul li a {
 
 .fullscreen-blur {
   overflow-x: hidden;
-  filter: blur(12px);
+}
+
+.Background {
+  position: fixed;
+  width: 125%;
+  transform: translateX(-20%) translateY(-15%);
 }
 
 .page-content {
