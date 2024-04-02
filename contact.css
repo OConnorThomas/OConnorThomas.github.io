@@ -28,6 +28,7 @@
   width: 100%;
   height: 100%;
   border-radius: 20px;
+  position: relative;
   clip-path: xywh(0% 0% 100% 100% round 20px);
 }
 
@@ -39,6 +40,12 @@
 .blurred {
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
   filter: blur(100px);
 }
@@ -61,6 +68,28 @@
 .spacer {
   margin: 10% 0 0 0;
 }
+
+.small-pad {
+  margin: 5%;
+  height: 20vh;
+  width: auto;
+}
+
+.inline {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  z-index: 20;
+}
+
+h3 {
+  position: relative;
+  color: white;
+  font-size: 2.5vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+
 
 .double_container {
   display: grid;
