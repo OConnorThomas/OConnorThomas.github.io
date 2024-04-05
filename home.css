@@ -88,7 +88,7 @@ nav ul li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 10px 15px;
+  padding: 1vh 1vw;
   text-decoration: none;
 }
 
@@ -128,7 +128,7 @@ nav ul li a {
 }
 
 .right a {
-  padding: 10px 10px;
+  padding: 1vh 1vh;
 }
 
 .fleft {
@@ -137,6 +137,15 @@ nav ul li a {
 
 .fright {
   float: right;
+}
+
+.const-size {
+  height: 3.5vw;
+  width: auto;
+}
+
+.settings-icon-size {
+  height: 3vw;
 }
 
 /* Search bar */
@@ -149,7 +158,7 @@ nav ul li a {
 
 .search-input {
   width: 100%;
-  padding: 10px;
+  padding: 1vw;
   font-size: 2vh;
   border: 0.3vw solid white;
   border-radius: 0.75vw;
@@ -160,7 +169,7 @@ nav ul li a {
 
 .search-icon {
   position: absolute;
-  top: 55%;
+  top: 3.5vh;
   right: 0%;
   transform: translateY(-50%);
   width: 3vw; /* Adjust icon width */
@@ -239,8 +248,8 @@ nav ul li a {
   text-decoration: none;
   color: white;
   list-style-type: none;
-  border: 5px solid white;
-  border-radius: 10px;
+  border: 0.3vw solid white;
+  border-radius: 0.75vw;
   background-color: black;
   color: white;
   box-sizing: border-box;
@@ -251,8 +260,8 @@ nav ul li a {
   text-decoration: none;
   color: white;
   list-style-type: none;
-  border: 3px solid white;
-  border-radius: 10px;
+  border: 0.3vw solid white;
+  border-radius: 0.75vw;
   background-color: black;
   color: white;
   box-sizing: border-box;
@@ -261,8 +270,8 @@ nav ul li a {
 .invert-wb:hover {
   background-color: white;
   color: #050505;
-  border: 3px solid #a00000;
-  border-radius: 10px;
+  border: 0.3vw solid #a00000;
+  border-radius: 0.75vw;
 }
 
 .inputsForm {
@@ -276,8 +285,8 @@ nav ul li a {
 
 .search_input {
   width: 30%;
-  padding: 10px;
-  font-size: 16px;
+  padding: 10vh;
+  font-size: 1vh;
   border-radius: 10px;
   background-color: black;
   color: white;
@@ -306,5 +315,5 @@ nav ul li a {
 }
 
 .pad {
-  margin-right: 10px;
+  margin-right: 1vw;
 }
