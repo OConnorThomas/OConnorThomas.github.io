@@ -101,9 +101,19 @@ nav ul li a {
   text-shadow: 2px 2px 4px rgba(256, 0, 0, 0.5);
 }
 
+.orange-hover:hover {
+  color: #ff8800;
+  text-shadow: 2px 2px 4px rgba(256, 136, 0, 0.5);
+}
+
 .yellow-hover:hover {
   color: #ffff00;
   text-shadow: 2px 2px 4px rgba(256, 256, 0, 0.5);
+}
+
+.purple-hover:hover {
+  color: #aa009c;
+  text-shadow: 2px 2px 4px rgba(170, 0, 156, 0.5);
 }
 
 .left {
