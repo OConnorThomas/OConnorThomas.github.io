@@ -3,9 +3,8 @@
   <head>
     <!-- Link to external CSS file -->
     <link rel="stylesheet" type="text/css" href="home.css" />
-    <link rel="stylesheet" type="text/css" href="finances.css" />
+    <link rel="stylesheet" type="text/css" href="contact.css" />
     <!-- Link to external JS file -->
-    <script src="repo/js/finances.js"></script>
     <!-- Metadata -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,83 +18,80 @@
     <title>Financial Analysis Software</title>
     <link
       rel="icon"
-      href="repo/images/FAS Transparent.png"
+      href="repo/images/FAS Transparent Square.png"
       type="FAS Square.png"
     />
   </head>
   <!-- Body -->
 
   <body class="noscroll">
-    <!-- Header -->
-    <div class="header-container">
-      <div class="header-background"></div>
-      <div class="header-logo">
+    <nav>
+      <div class="left">
         <a href="home.html">
-          <img src="repo/images/FAS.png" alt="FAS Logo" height="70" />
-        </a>
-      </div>
-      <div class="header-title">
-        <a href="home.html">
-          <h1>Financial Analysis Software</h1>
-        </a>
-      </div>
-      <a href="test.html" class="account-box"> Account<br />Sign-up | Login</a>
-    </div>
-
-    <!-- Navigation bar -->
-    <div class="navbar">
-      <div class="navbar-box"><a href="home.html">Home</a></div>
-      <div class="navbar-box"><a href="analysis.html">Analysis</a></div>
-      <div class="navbar-box"><a href="finances.html">Finances</a></div>
-      <div class="navbar-box"><a href="algorithms.html">Algorithms</a></div>
-      <div class="navbar-box"><a href="contact.html">About/Contact</a></div>
-    </div>
-
-    <!-- Page content -->
-    <div class="bounding-box side">
-      <div class="main centered">
-        <h3>Current Portfolio:</h3>
-        <div class="pie-chart"></div>
-        <br />
-        <div class="label">&nbsp;Stock Breakdown:</div>
-        <br />
-        <div class="investments">
-          JNJ : $15,000
-          <br />GE : $30,000 <br />AMZN : $10,000 <br />WMT : $45,000
-        </div>
-      </div>
-    </div>
-    <div class="bounding-box middle">
-      <div class="main large-font centered">
-        <b>Welcome Dashboard</b>
-        <div class="medium-font">
-          <p>Portfolio's performance:</p>
           <img
-            src="repo/images/Stock Chart Placeholder.png"
-            alt="Stock Chart Example"
+            src="repo/images/FAS Transparent.png"
+            alt="FAS Logo"
+            class="small-height"
           />
-          <p>Tracked stocks go underneath</p>
-        </div>
+        </a>
+        <ul>
+          <li><a href="home.html" class="red-hover">Home</a></li>
+          <li>
+            <a href="analysis.html" class="red-hover">Analysis</a>
+          </li>
+          <li>
+            <a href="finances.html" class="red-hover">Finances</a>
+          </li>
+          <li>
+            <a href="algorithms.html" class="red-hover">Algorithms</a>
+          </li>
+          <li>
+            <a href="contact.html" class="red-hover">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="search-container">
+        <form id="search-form">
+          <input
+            type="text"
+            id="search-input"
+            class="search-input"
+            placeholder="Predict on a Stock:"
+          />
+          <button type="submit" id="search-button" class="search-icon"></button>
+        </form>
+      </div>
+      <div class="right">
+        <div id="accountbox"></div>
+      </div>
+    </nav>
+    <div class="nav-extension"></div>
+    <div class="blurred-region"></div>
+    <div class="page-content">
+      <div class="Background">
+        <img
+          class="Background"
+          src="repo/images/FAS_park.jpg"
+          alt="FAS Park Background image"
+        />
+      </div>
+      <div class="double_container">
+        <div class="box"></div>
+        <div class="box move-left">
+          <div class="glass spacer">
+            <div class="blurred">
+            </div>
+            <div class="center">
+              <h2>
+                FAS is a Neural Network trained to predict future stock prices.
+              </h2>
+              <h2 class="spacer">
+                Try out the model, create an account, and explore how the algorithm works.
+              </h2>
+            </div>
+          </div>
       </div>
     </div>
-    <div class="bounding-box side">
-      <div class="main centered">
-        <h3>Suggested Investments:</h3>
-        <div class="label">&nbsp;Current Suggestions:</div>
-        <br />
-        <div class="investments">
-          JNJ : $15,000 @ $200/share
-          <br />GE : $30,000 @ $100/share <br />AMZN : $10,000 @ $28/share
-        </div>
-        <br />
-        <div class="label">&nbsp;Previous Suggestions:</div>
-        <br />
-        <div class="investments">
-          WMT : $45,000 @ $50/share
-          <br />NVDA @ $500/share <br />RCL @ $45/share <br />TSLA @
-          $14,000/share
-        </div>
-      </div>
-    </div>
+    <script src="repo/js/home.js"></script>
   </body>
 </html>

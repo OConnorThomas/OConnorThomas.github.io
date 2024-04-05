@@ -1,195 +1,300 @@
-/* Header Styling */
-.header-container {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* global */
+:root {
+  --user-color-1: rgb(94, 101, 0, 0.25);
+  --user-color-2: rgba(255, 0, 0, 0.25);
+  --user-color-3: rgba(0, 0, 0, 0.25);
 }
 
-.header-background {
-  position: fixed;
-  width: 100%;
-  height: 250px;
-  background-color: white;
-}
-
-.header-logo {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-}
-
-.header-title {
-  position: fixed;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.header-title a {
-  text-decoration: none;
-  color: #000000;
-}
-
-.account-box {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border: 2px solid #000000;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  color: #333;
-  text-align: center;
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 /* Remove scroll bar */
 .noscroll {
   overflow-y: scroll;
+  background-color: #222;
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
 .noscroll {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
 
-/* Navigation Bar Styling */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  width: 100%;
-  padding: 4px 0;
-  margin-top: 80px;
-  position: fixed;
-}
-
-.navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  text-decoration: none;
-  width: 50%;
-  margin-left: 25%;
-  box-sizing: border-box;
-}
-
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.navbar::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.navbar-box {
-  float: left;
-  width: 19.58%; /* provides enough background space for even borders */
-  text-align: center;
-  padding: 10px 0;
-  margin-left: 0.27%; /* retain borders on resize - use relative measurement */
-  box-sizing: border-box;
-  background-color: #f2f2f2;
-}
-
-.navbar-box a {
-  text-decoration: none;
-  color: #444;
-}
-
-/* Page Content Styling */
-.main {
-  margin-top: 140px;
-}
-
-.large-font {
-  font-size: 50pt;
-}
-
-.centered {
-  text-align: center;
-}
-
-.medium-font {
-  font-size: 40pt;
-  line-height: 0.8;
-}
-
-.bounding-box {
-  float: left;
-  background-color: #fff;
-  border: 2px solid #000;
-  border-radius: 10px;
-  padding: 15px;
-  margin: 0 auto;
-}
-
-.middle {
-  width: 45%;
-  margin-left: 105px; /* Hack to prevent premature resizing */
-  margin-right: 15px;
-}
-
-.side {
-  width: 23.2%; /* Hack to maximize side panel size */
-  margin-right: -90px; /* Hack to prevent premature resizing */
-  padding: 15px;
-}
-
-.pie-chart {
-  width: 95%;
-  padding-bottom: 95%;
-  background: conic-gradient(
-    #3498db 0% 15%,
-    #2ecc71 15% 45%,
-    #e74c3c 45% 55%,
-    #f39c12 55% 100%
-  );
-  border-radius: 50%;
-}
-
-/* Button Styling */
-.button-container {
+h1 {
+  position: relative;
   display: flex;
-  justify-content: center;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #466ab6;
+  flex-direction: column;
+  align-items: center;
   color: white;
-  border-radius: 4px;
-  border: 3px solid black;
-  font-size: 30pt;
-  margin: 0 5px;
-}
-
-button:hover {
-  background-color: #792929;
+  text-decoration: underline;
+  font-size: 40pt;
+  z-index: 1;
 }
 
 h2 {
-  line-height: 0.8;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 4.5vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-h3 {
-  font-size: 25pt;
-  font-weight: bold;
-  text-decoration: underline;
+label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 30pt;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-body {
-  word-wrap: break-word; /* Hack to move words downwards on resize */
+/* Navbar */
+nav {
+  position: fixed;
+  width: 100%;
+  height: 15%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background-color: #050505;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 3vh;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.small-height {
+  height: 7.5vh;
+}
+
+.red-hover:hover {
+  color: rgba(256, 0, 0, 0.8);
+  text-shadow: 2px 2px 4px rgba(256, 0, 0, 0.5);
+}
+
+.yellow-hover:hover {
+  color: #ffff00;
+  text-shadow: 2px 2px 4px rgba(256, 256, 0, 0.5);
+}
+
+.left {
+  margin: 0 0 0 3%;
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.right a {
+  padding: 10px 10px;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+  float: right;
+}
+
+/* Search bar */
+.search-container {
+  position: relative;
+  max-width: 28vw; /* Adjust width as needed */
+  flex-grow: 1;
+  text-align: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 2vh;
+  border: 0.3vw solid white;
+  border-radius: 0.75vw;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+}
+
+.search-icon {
+  position: absolute;
+  top: 55%;
+  right: 0%;
+  transform: translateY(-50%);
+  width: 3vw; /* Adjust icon width */
+  height: 3vh; /* Adjust icon height */
+  background-color: transparent;
+  background-image: url("repo/images/search\ icon.png"); /* Path to your search icon */
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-style: none;
+}
+
+.shadowed-text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* horizontal-offset vertical-offset blur-radius color */
+}
+
+.Title {
+  display: flex;
+  position: absolute;
+  color: #700000;
+  font-size: 280pt;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  line-height: 0%;
+}
+
+.nav-extension {
+  position: fixed;
+  top: 15%;
+  left: 0;
+  width: 100%;
+  height: 2%;
+  background-color: #050505;
+  z-index: -5;
+}
+
+.blurred-region {
+  position: fixed;
+  top: 13%;
+  left: 0;
+  width: 100%; /* Adjust the width as per your requirement */
+  height: 7%; /* Adjust the height as per your requirement */
+  overflow: hidden; /* Ensure the content doesn't overflow */
+  -webkit-backdrop-filter: blur(75px);
+  backdrop-filter: blur(15px);
+  /* Apply the gradient mask */
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  /* Ensure smooth transition between the blurred and non-blurred areas */
+  mask-mode: alpha;
+  z-index: 101;
+}
+
+.fullscreen-blur {
+  overflow-x: hidden;
+}
+
+.Background {
+  position: fixed;
+  width: 125%;
+  transform: translateX(-20%) translateY(-15%);
+}
+
+.page-content {
+  position: absolute;
+  top: 17%;
+  left: 0%;
+  width: 100%; /* Adjust the width as per your requirement */
+  z-index: -1;
+}
+
+.white-borders {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  list-style-type: none;
+  border: 5px solid white;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+}
+
+.invert-wb {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  list-style-type: none;
+  border: 3px solid white;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+}
+
+.invert-wb:hover {
+  background-color: white;
+  color: #050505;
+  border: 3px solid #a00000;
+  border-radius: 10px;
+}
+
+.inputsForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  margin-top: 5%;
+}
+
+.search_input {
+  width: 30%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  margin-top: 2%;
+}
+
+.accent-button {
+  padding: 2px 30px;
+  min-width: 150px;
+  background-color: #650000;
+  color: white;
+  border-radius: 10px;
+  margin-top: 2%;
+  font-size: 30pt;
+}
+
+.swal-button {
+  background-color: #650000;
+  border-color: #650000;
+}
+
+.swal-button:not([disabled]):hover {
+  background-color: #333;
+  border-color: #333;
+}
+
+.pad {
+  margin-right: 10px;
 }
