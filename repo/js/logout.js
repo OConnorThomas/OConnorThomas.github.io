@@ -18,5 +18,5 @@ updateContent();
 
 logOutBtn.addEventListener("click", function () {
   localStorage.setItem("_LOGGEDIN", 0);
-  window.location.href = "test.html";
+  window.location.href = "home.html";
 });

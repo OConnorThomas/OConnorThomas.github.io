@@ -21,7 +21,7 @@ function signIn() {
 
   if (isCorrectEmailAndPassword(loginEmail, loginPassword)) {
     localStorage.setItem("_LOGGEDIN", 1);
-    window.location.href = "test.html";
+    window.location.href = "home.html";
   } else {
     swal({
       text: "Incorrect email or password",

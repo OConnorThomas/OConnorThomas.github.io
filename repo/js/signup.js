@@ -38,7 +38,7 @@ function signUp() {
       text: "Sign up successful",
     });
     localStorage.setItem("_LOGGEDIN", 1);
-    window.location.href = "test.html";
+    window.location.href = "home.html";
   } else {
     swal({
       text: "Invalid email or email already in use",
