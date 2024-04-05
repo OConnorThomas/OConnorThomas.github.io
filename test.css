@@ -102,7 +102,7 @@ nav ul li a {
 }
 
 .yellow-hover:hover {
-  color: var(--user-color-2);
+  color: #ffff00;
   text-shadow: 2px 2px 4px rgba(256, 256, 0, 0.5);
 }
 
@@ -119,6 +119,14 @@ nav ul li a {
 
 .right a {
   padding: 10px 10px;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+  float: right;
 }
 
 /* Search bar */

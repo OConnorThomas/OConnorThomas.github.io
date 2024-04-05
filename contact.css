@@ -75,21 +75,37 @@
   width: auto;
 }
 
+.lp10 {
+  padding-left: 10px;
+}
+
+.jright {
+  transform: translateX(90%);
+}
+
 .inline {
+  width: fit-content;
   display: inline-flex;
+  flex: 1;
   align-items: center;
+  align-content: center;
+  align-self: center;
   text-align: center;
-  z-index: 20;
+  z-index: 10;
+}
+
+.cb-style {
+  color: white;
+  text-decoration: none;
 }
 
 h3 {
   position: relative;
   color: white;
-  font-size: 2.5vh;
+  font-size: 2.3vh;
   font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
 }
-
-
 
 .double_container {
   display: grid;
@@ -106,6 +122,14 @@ h3 {
   height: 200px;
   border-radius: 50%;
   z-index: -6;
+}
+
+.focus {
+  z-index: 500;
+}
+
+.no-decor {
+  text-decoration: none;
 }
 
 .uc1 {
