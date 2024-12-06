@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Link to external CSS file -->
     <link rel="stylesheet" type="text/css" href="home.css" />
     <link rel="stylesheet" type="text/css" href="contact.css" />
-    <!-- Metadata -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="Financial, Analysis, Software" />
-    <!-- Description / Title / Logo -->
     <meta
       name="description"
-      content="This program processes historical stock data and 
-              suggests an investment using a predictive algorithm."
+      content="This program processes historical stock data and suggests an investment using a predictive algorithm."
     />
     <title>Financial Analysis Software</title>
     <link
@@ -21,7 +17,6 @@
       type="FAS Square.png"
     />
   </head>
-  <!-- Body -->
 
   <body class="noscroll">
     <nav>
@@ -35,18 +30,10 @@
         </a>
         <ul>
           <li><a href="home.html" class="red-hover">Home</a></li>
-          <li>
-            <a href="analysis.html" class="red-hover">Analysis</a>
-          </li>
-          <li>
-            <a href="finances.html" class="red-hover">Finances</a>
-          </li>
-          <li>
-            <a href="algorithms.html" class="red-hover">Algorithms</a>
-          </li>
-          <li>
-            <a href="contact.html" class="red-hover">Contact</a>
-          </li>
+          <li><a href="analysis.html" class="red-hover">Analysis</a></li>
+          <li><a href="finances.html" class="red-hover">Finances</a></li>
+          <li><a href="algorithms.html" class="red-hover">Algorithms</a></li>
+          <li><a href="contact.html" class="red-hover">Contact</a></li>
         </ul>
       </div>
       <div class="search-container">
@@ -56,14 +43,26 @@
             id="search-input"
             class="search-input"
             placeholder="Predict on a Stock:"
+            list="stock-list"
+            autocomplete="off"
           />
           <button type="submit" id="search-button" class="search-icon"></button>
         </form>
+
+        <!-- Static list of items for the dropdown -->
+        <datalist id="stock-list">
+          <option value="AAPL"></option>
+          <option value="GE"></option>
+          <option value="MSFT"></option>
+          <option value="RBOT"></option>
+          <option value="NVDA"></option>
+        </datalist>
       </div>
       <div class="right">
-        <div id="accountbox"></div>
+        <h3 id="temp white">Prediction Here</h3>
       </div>
     </nav>
+
     <div class="nav-extension"></div>
     <div class="blurred-region"></div>
     <div class="page-content">
@@ -78,19 +77,28 @@
         <div class="box"></div>
         <div class="box move-left">
           <div class="glass spacer">
-            <div class="blurred">
-            </div>
+            <div class="blurred"></div>
             <div class="center">
               <h2>
-                FAS is a Neural Network trained to predict future stock prices.
+                FAS is a Neural Network trained on SEC filings to predict future
+                company performance.
               </h2>
-              <h2 class="spacer">
-                Try out the model, create an account, and explore how the algorithm works.
+              <h2 class="pt16 spacer">
+                Try out the model with the search bar.<br />
+                Modify your search in the analysis tab.<br />
+                Check out the source code in the algorithm tab.<br />
+                Discover the team in the contact tab.
               </h2>
             </div>
           </div>
+        </div>
       </div>
     </div>
-    <script src="repo/js/home.js"></script>
+
+    <!-- Include the TensorFlow.js and node-fetch CDN links -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/node-fetch@2.6.7"></script>
+    <!-- Load custom JS file (query.js) -->
+    <script src="repo/js/query.js"></script>
   </body>
 </html>

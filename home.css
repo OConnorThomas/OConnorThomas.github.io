@@ -165,6 +165,34 @@ nav ul li a {
   background-color: black;
   color: white;
   box-sizing: border-box;
+  /* Prevent color change on item selection */
+  appearance: none; /* Remove dropdown icon */
+  -webkit-appearance: none; /* For WebKit-based browsers (Chrome/Safari) */
+  -moz-appearance: none; /* For Firefox */
+  -ms-appearance: none; /* For IE/Edge */
+}
+
+/* Remove the dropdown icon when focused or hovered */
+.search-input:focus,
+.search-input:hover {
+  outline: none;
+  cursor: text; /* Optional: Changes the cursor to text while typing */
+}
+
+/* Remove dropdown arrow on WebKit browsers (Chrome/Safari) */
+.search-input::-webkit-contacts-auto-fill-button {
+  display: none;
+}
+
+/* Hide the dropdown icon in Firefox */
+.search-input::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+
+/* Hide the dropdown icon in IE/Edge */
+.search-input::-ms-clear {
+  display: none;
 }
 
 .search-icon {
@@ -499,4 +527,12 @@ h3 {
   align-self: center;
   position: relative;
   z-index: 0;
+}
+
+.pt16 {
+  font-size: 2.8vh;
+}
+
+.white {
+  color: white;
 }
