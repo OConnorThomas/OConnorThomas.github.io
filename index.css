@@ -1,6 +1,6 @@
 /* Add some basic styling */
 :root {
-  --mycolor: #650000; /* You can set this to any color you want */
+  --mycolor: #750000; /* You can set this to any color you want */
   --background-color: #e6e6e6; /* Default light gray */
   --text-color: #ffffff;
   --section-color: ;
@@ -106,6 +106,7 @@ ul {
 }
 
 .project {
+  border-radius: 3vw;
   background: var(--section-color);
   transition: background 0.3s;
   padding: 1rem;
@@ -142,7 +143,7 @@ footer {
   color: white; /* Default text color */
   background-image: radial-gradient(circle, #000000 20%, var(--mycolor) 100%);
   transition: background-image 0.3s, color 0.3s;
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 0.5vw; /* Rounded corners */
   position: relative; /* Required for pseudo-elements */
   overflow: hidden; /* Required for pseudo-elements */
 }
