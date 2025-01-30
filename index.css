@@ -181,7 +181,7 @@ footer {
     opacity: 0.3; /* Less visible start */
   }
   50% {
-    transform: scale(1.1); /* More significant scaling */
+    transform: scale(1); /* More significant scaling */
     opacity: 1;
   }
   100% {
