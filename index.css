@@ -3,7 +3,8 @@
   --mycolor: #750000; /* You can set this to any color you want */
   --background-color: #e6e6e6; /* Default light gray */
   --text-color: #ffffff;
-  --section-color: ;
+  --section-color: #111111;
+  --head-foot-color: #cccccc;
 }
 
 .my-color {
@@ -56,16 +57,21 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
+.title {
+  color: var(--text-color);
+}
+
 header {
   border-radius: 1vw;
-  background: #333;
-  color: #fff;
+  background: var(--head-foot-color);
+  color: var(--text-color);
   padding: 1rem;
   text-align: center;
 }
 
 header h1 {
   margin: 0;
+  color: var(--text-color);
 }
 
 header nav ul {
@@ -79,7 +85,7 @@ header nav ul li {
 }
 
 a {
-  color: #ffffff;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -121,9 +127,9 @@ ul {
 }
 
 footer {
-  border-radius: 3vw;
-  background: #333;
-  color: #fff;
+  border-radius: 1vw;
+  background: var(--head-foot-color);
+  color: var(--text-color);
   text-align: center;
   padding: 1rem;
   position: relative;
@@ -133,7 +139,6 @@ footer {
 .project {
   border-radius: 3vw;
   background: var(--section-color);
-  transition: background 0.3s;
   padding: 1rem;
   margin-bottom: 1rem;
 }
@@ -150,7 +155,7 @@ footer {
   position: relative; /* Required for pseudo-elements */
   overflow: hidden; /* Required for pseudo-elements */
   transition: border 0.3s ease; /* Smooth transition for border color change */
-  height: 27vh
+  height: 27vh;
 }
 
 /* Keyframes for the pulsing effect on border */
@@ -159,7 +164,7 @@ footer {
     border-color: var(--mycolor);
   }
   50% {
-    border-color: #bbb; /* White pulse */
+    border-color: var(--text-color); /* White pulse */
   }
   100% {
     border-color: var(--mycolor);

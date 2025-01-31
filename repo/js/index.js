@@ -2,14 +2,17 @@
 function updateBackgroundColor() {
   const hour = new Date().getHours();
   const isDaytime = hour > 6 && hour < 18;
+  // const isDaytime = false;
   
   // Set background color to a lighter shade during the day and a darker shade during the night
   const backgroundColor = isDaytime ? '#e6e6e6' : '#222222'; // Light gray for day, darker gray for night
   const textColor = isDaytime ? '#000000' : '#ffffff';
   const sectionColor = isDaytime ? '#ffffff' : '#111111';
+  const headfootColor = isDaytime ? '#bbbbbb' : '#111111';
   document.documentElement.style.setProperty('--section-color', sectionColor);
   document.documentElement.style.setProperty('--background-color', backgroundColor);
   document.documentElement.style.setProperty('--text-color', textColor);
+  document.documentElement.style.setProperty('--head-foot-color', headfootColor);
 }
 // Dynamic Dark Mode
 
