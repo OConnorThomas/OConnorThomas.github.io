@@ -14,6 +14,23 @@
   text-decoration: underline;
 }
 
+/* Keyframes for the pulsing effect on underlined text */
+@keyframes underlinePulse {
+  0% {
+    color: var(--text-color);
+  }
+  50% {
+    color: var(--mycolor); /* theme pulse */
+  }
+  100% {
+    color: var(--text-color);
+  }
+}
+
+.underline:hover {
+  animation: underlinePulse 0.8s infinite;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
 body {
   font-family: "Montserrat", sans-serif;
@@ -40,6 +57,7 @@ body {
 }
 
 header {
+  border-radius: 1vw;
   background: #333;
   color: #fff;
   padding: 1rem;
@@ -90,11 +108,6 @@ h2 {
   transition: color 0.3s;
 }
 
-h2:hover {
-  transition: 0.5s;
-  color: var(--mycolor);
-}
-
 h3 {
   font-size: 20pt;
   color: var(--text-color);
@@ -105,6 +118,16 @@ ul {
   font-size: 25pt;
   color: var(--text-color);
   transition: color 0.3s;
+}
+
+footer {
+  border-radius: 3vw;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
 }
 
 .project {
@@ -121,19 +144,33 @@ ul {
 
 .profile-pic {
   border-radius: 50%; /* This will make it round, assuming the image is a square */
-  border: 3px solid var(--mycolor); /* Adjust the border thickness (3px) and replace 'your_color' with your color code or variable */
+  border: 3px solid var(--mycolor); /* Border color */
   display: block;
-  margin: 0 auto; /* This centers the image in its container */
+  margin: 0 auto; /* Center the image in its container */
+  position: relative; /* Required for pseudo-elements */
+  overflow: hidden; /* Required for pseudo-elements */
+  transition: border 0.3s ease; /* Smooth transition for border color change */
+  height: 27vh
 }
 
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  position: relative;
-  bottom: 0;
+/* Keyframes for the pulsing effect on border */
+@keyframes borderAnimation {
+  0% {
+    border-color: var(--mycolor);
+  }
+  50% {
+    border-color: #bbb; /* White pulse */
+  }
+  100% {
+    border-color: var(--mycolor);
+  }
 }
+
+/* Apply the pulse effect on hover */
+.profile-pic:hover {
+  animation: borderAnimation 0.8s infinite;
+}
+
 /* Button Styling */
 .button {
   padding: 10px 20px;
@@ -171,11 +208,6 @@ footer {
   z-index: 1;
 }
 
-.button:hover::after {
-  opacity: 1; /* Show the pseudo-element */
-  animation: pulseAnimation 0.6s infinite; /* animation */
-}
-
 /* Keyframes for the pulsing effect */
 @keyframes pulseAnimation {
   0% {
@@ -184,12 +216,17 @@ footer {
   }
   50% {
     transform: scale(1); /* More significant scaling */
-    opacity: 1;
+    opacity: 0.6;
   }
   100% {
     transform: scale(1);
     opacity: 0.3; /* Back to less visible */
   }
+}
+
+.button:hover::after {
+  opacity: 1; /* Show the pseudo-element */
+  animation: pulseAnimation 0.8s infinite; /* animation */
 }
 
 .clickable-image {
@@ -206,13 +243,12 @@ footer {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 10vh; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
 }
 
@@ -220,8 +256,11 @@ footer {
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+  max-width: 90vw;
+  max-height: 80vh;
+  width: 90vw;
+  height: auto;
+  object-fit: contain;
 }
 
 /* Caption of Modal Image */
@@ -275,4 +314,8 @@ footer {
   .modal-content {
     width: 100%;
   }
+}
+
+#contact a {
+  display: inline-block; /* Makes the anchor tag fit the image's size */
 }
