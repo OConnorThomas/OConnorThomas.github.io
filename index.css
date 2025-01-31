@@ -11,6 +11,11 @@
   color: var(--mycolor);
 }
 
+/* Apply smooth scrolling globally */
+html {
+  scroll-behavior: smooth;
+}
+
 .underline {
   text-decoration: underline;
 }
