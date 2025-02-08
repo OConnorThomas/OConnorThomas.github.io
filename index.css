@@ -67,26 +67,31 @@ body {
 }
 
 header {
+  height: auto;
   border-radius: 1vw;
   background: var(--head-foot-color);
   color: var(--text-color);
-  padding: 1rem;
   text-align: center;
+  padding-bottom: 2vh;
 }
 
 header h1 {
   margin: 0;
   color: var(--text-color);
+  padding: 1vw;
 }
 
 header nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+  margin-top: -2vh;
 }
 
+
 header nav ul li {
-  display: inline;
-  margin-right: 20px;
+  display: inline-block;
+  margin: 0 0.2vw;
 }
 
 a {
@@ -95,38 +100,40 @@ a {
 }
 
 p {
+  font-size: 3vh;
   color: var(--text-color);
   transition: color 0.3s;
 }
 
 section {
-  padding: 10px;
-  margin: 10px 10px;
+  padding: 0 1.2vh;
+  margin: 1.2vh 1.2vh;
   text-align: center;
 }
 
 h1 {
-  font-size: 35pt;
+  font-size: min(7vh, 5vw);
   text-decoration: none;
   color: var(--text-color);
   transition: color 0.3s;
 }
 
 h2 {
-  margin-top: -10px;
-  font-size: 25pt;
+  font-size: 5vh;
   color: var(--text-color);
   transition: color 0.3s;
+  margin: 1vh
 }
 
 h3 {
-  font-size: 20pt;
+  font-size: 4vh;
   color: var(--text-color);
   transition: color 0.3s;
+  margin: 1vh;
 }
 
 ul {
-  font-size: 25pt;
+  font-size: 5vh;
   color: var(--text-color);
   transition: color 0.3s;
 }
@@ -154,7 +161,7 @@ footer {
 
 .profile-pic {
   border-radius: 50%; /* This will make it round, assuming the image is a square */
-  border: 3px solid var(--mycolor); /* Border color */
+  border: 0.4vh solid var(--mycolor); /* Border color */
   display: block;
   margin: 0 auto; /* Center the image in its container */
   position: relative; /* Required for pseudo-elements */
@@ -183,12 +190,12 @@ footer {
 
 /* Button Styling */
 .button {
-  padding: 10px 20px;
-  font-size: 20pt;
+  padding: 1.2vh 2.5vh;
+  font-size: 3.5vh;
   border: none;
   outline: none;
   cursor: pointer;
-  min-width: 150px;
+  min-width: 18vh;
   color: white; /* Default text color */
   background-image: radial-gradient(circle, #000000 20%, var(--mycolor) 100%);
   transition: background-image 0.3s, color 0.3s;
@@ -207,7 +214,7 @@ footer {
   bottom: 0;
   background: radial-gradient(circle, #444444 20%, var(--mycolor) 100%);
   opacity: 0;
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 0.5vw; /* Rounded corners */
   transition: opacity 0.3s;
   z-index: 0;
 }
@@ -240,6 +247,7 @@ footer {
 }
 
 .clickable-image {
+  height: 25vh;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -281,8 +289,8 @@ footer {
   max-width: 700px;
   text-align: center;
   color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+  padding: 1.2vh 0;
+  height: 18vh;
 }
 
 /* Add Animation - Zoom in the Modal */
@@ -304,10 +312,10 @@ footer {
 /* The Close Button */
 .close {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 1.8vh;
+  right: 4.2vh;
   color: #f1f1f1;
-  font-size: 40px;
+  font-size: 4.8vh;
   font-weight: bold;
   transition: 0.3s;
 }
@@ -320,7 +328,7 @@ footer {
 }
 
 /* Responsive Columns - Stacked on Small Screens */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 84vw) {
   .modal-content {
     width: 100%;
   }
