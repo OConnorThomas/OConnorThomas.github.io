@@ -81,7 +81,7 @@ header h1 {
   padding: 1vw;
 }
 
-header nav ul {
+ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -89,7 +89,7 @@ header nav ul {
 }
 
 
-header nav ul li {
+li {
   display: inline-block;
   margin: 0 0.2vw;
 }
@@ -112,7 +112,7 @@ section {
 }
 
 h1 {
-  font-size: min(7vh, 5vw);
+  font-size: min(7vh, 7vw);
   text-decoration: none;
   color: var(--text-color);
   transition: color 0.3s;
@@ -151,7 +151,7 @@ footer {
 .project {
   border-radius: 3vw;
   background: var(--section-color);
-  padding: 1rem;
+  padding: 1rem 0.2rem;
   margin-bottom: 1rem;
 }
 
@@ -247,7 +247,7 @@ footer {
 }
 
 .clickable-image {
-  height: 25vh;
+  height: 23vh;
   cursor: pointer;
   transition: 0.3s;
 }
