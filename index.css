@@ -88,7 +88,6 @@ ul {
   margin-top: -2vh;
 }
 
-
 li {
   display: inline-block;
   margin: 0 0.2vw;
@@ -122,7 +121,7 @@ h2 {
   font-size: 5vh;
   color: var(--text-color);
   transition: color 0.3s;
-  margin: 1vh
+  margin: 1vh;
 }
 
 h3 {
@@ -139,6 +138,7 @@ ul {
 }
 
 footer {
+  font-size: 2vh;
   border-radius: 1vw;
   background: var(--head-foot-color);
   color: var(--text-color);
@@ -256,6 +256,15 @@ footer {
   opacity: 0.7;
 }
 
+.contact-logo {
+  height: 10vh;
+  margin: 0 1vh;
+}
+
+.contact-logo:hover {
+  opacity: 0.7;
+}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -286,11 +295,11 @@ footer {
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 700px;
+  max-width: 84vw;
   text-align: center;
   color: #ccc;
   padding: 1.2vh 0;
-  height: 18vh;
+  font-size: 3vh;
 }
 
 /* Add Animation - Zoom in the Modal */
@@ -336,4 +345,40 @@ footer {
 
 #contact a {
   display: inline-block; /* Makes the anchor tag fit the image's size */
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 0 gold);
+  }
+  50% {
+    filter: drop-shadow(0 0 0.8vh gold);
+  }
+  100% {
+    filter: drop-shadow(0 0 0 gold);
+  }
+}
+
+.glow-effect {
+  position: relative;
+  animation: glow 2.5s infinite;
+}
+
+/* Adding a glowing background behind the transparent PNG */
+.glow-effect::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 0, 0.8) 0%,
+    rgba(255, 215, 0, 0) 70%
+  );
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 50%;
+  animation: glow 2.5s infinite;
 }

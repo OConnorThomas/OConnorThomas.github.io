@@ -26,17 +26,25 @@ document.addEventListener('keydown', function(event) {
 });
 
 // Function to open the popup
-function openPopup(src, altText) {
+function openPopup(src, altText, glow) {
   // Get the modal
   var modal = document.getElementById("popup-modal");
   // Get the image and insert it inside the modal
   var modalImg = document.getElementById("popup-image");
   var captionText = document.getElementById("caption");
+  
   modal.style.display = "block";
   modalImg.src = src;
-  // Set the alt text as the caption
   captionText.innerHTML = altText;
+
+  // Apply or remove glow effect
+  if (glow) {
+    modalImg.classList.add("glow-effect");
+  } else {
+    modalImg.classList.remove("glow-effect");
+  }
 }
+
 
 // Function to close the popup
 function closePopup() {
