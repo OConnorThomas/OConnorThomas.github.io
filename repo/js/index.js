@@ -31,9 +31,13 @@ function openPopup(src, altText, glow) {
   var modal = document.getElementById("popup-modal");
   // Get the image and insert it inside the modal
   var modalImg = document.getElementById("popup-image");
+  var modalPdf = document.getElementById("popup-pdf");
   var captionText = document.getElementById("caption");
   
+  
   modal.style.display = "block";
+  modalPdf.style.display = "none";
+  modalImg.style.display = "block";
   modalImg.src = src;
   captionText.innerHTML = altText;
 
@@ -43,6 +47,22 @@ function openPopup(src, altText, glow) {
   } else {
     modalImg.classList.remove("glow-effect");
   }
+}
+
+// Function to open the popup for PDFs
+function openPdf(pdfSrc, altText) {
+  var modal = document.getElementById("popup-modal");
+  var modalImg = document.getElementById("popup-image");
+  var modalPdf = document.getElementById("popup-pdf");
+  var captionText = document.getElementById("caption");
+
+  modal.style.display = "block";
+  captionText.innerHTML = altText;
+
+  // Hide the image and show the embedded PDF
+  modalImg.style.display = "none";
+  modalPdf.style.display = "block";
+  modalPdf.src = pdfSrc;
 }
 
 

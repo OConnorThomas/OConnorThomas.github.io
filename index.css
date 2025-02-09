@@ -68,7 +68,7 @@ body {
 
 header {
   height: auto;
-  border-radius: 1vw;
+  border-radius: 0 0 3vw 3vw;
   background: var(--head-foot-color);
   color: var(--text-color);
   text-align: center;
@@ -102,6 +102,7 @@ p {
   font-size: 3vh;
   color: var(--text-color);
   transition: color 0.3s;
+  padding: 0 2vh;
 }
 
 section {
@@ -128,7 +129,7 @@ h3 {
   font-size: 4vh;
   color: var(--text-color);
   transition: color 0.3s;
-  margin: 1vh;
+  margin: 0 0 2vh 0 ;
 }
 
 ul {
@@ -139,11 +140,11 @@ ul {
 
 footer {
   font-size: 2vh;
-  border-radius: 1vw;
+  border-radius: 3vw 3vw 0 0;
   background: var(--head-foot-color);
   color: var(--text-color);
   text-align: center;
-  padding: 1rem;
+  padding: 2vh;
   position: relative;
   bottom: 0;
 }
@@ -151,8 +152,8 @@ footer {
 .project {
   border-radius: 3vw;
   background: var(--section-color);
-  padding: 1rem 0.2rem;
-  margin-bottom: 1rem;
+  padding: 2vh 0.2vh;
+  margin-bottom: 1vh;
 }
 
 .project img {
@@ -258,11 +259,17 @@ footer {
 
 .contact-logo {
   height: 10vh;
-  margin: 0 1vh;
+  margin-top: 2vh;
+  transition: 0.3s;
 }
 
 .contact-logo:hover {
   opacity: 0.7;
+}
+
+.label{
+  font-size: 2.5vh;
+  margin-top: -2.5vh;
 }
 
 /* The Modal (background) */
@@ -341,6 +348,14 @@ footer {
   .modal-content {
     width: 100%;
   }
+}
+
+/* Styles for PDF iframe */
+#popup-pdf {
+  width: 90vw;
+  height: 90vh;
+  display: none;
+  border: none;
 }
 
 #contact a {
