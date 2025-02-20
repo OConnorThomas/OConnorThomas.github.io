@@ -5,21 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TOConnor Portfolio</title>
-    <link
-      rel="icon"
-      href="repo/images/Thomas-Headshot.jpg"
-      type="Thomas-Headshot.jpg"
-    />
+    <link rel="icon" href="repo/images/Thomas-Headshot.jpg" type="Thomas-Headshot.jpg" />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body class="noscroll">
     <header>
-      <h1>
-        <a href="https://www.linkedin.com/in/oconnordthomas/"
-          >Thomas O'Connor's Portfolio</a
-        >
+      <h1 class="title">
+        <a href="https://www.linkedin.com/in/oconnordthomas/">Thomas O'Connor's Portfolio</a>
       </h1>
-      <ul>
+      <ul class="nav-list">
         <li>
           <a class="button" href="#Webapps"><span>Webapps</span></a>
         </li>
@@ -33,23 +27,46 @@
           <a class="button" href="#contact"><span>Contact</span></a>
         </li>
       </ul>
+      <a href="#contact">
+        <img class="header-pic" src="repo/images/Thomas-Headshot.jpg" alt="Thomas Contact Photo" />
+      </a>
+      <!-- Menu icon, hidden by default, shown on mobile and compromised viewports-->
+      <div class="menu-icon" id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <!-- Popup menu (hidden by default) -->
+      <div class="popup-menu" id="popup-menu">
+        <ul>
+          <li>
+            <a class="button" href="#Webapps"><span>Webapps</span></a>
+          </li>
+          <li>
+            <a class="button" href="#Coursework"><span>Coursework</span></a>
+          </li>
+          <li>
+            <a class="button" href="#games"><span>Games</span></a>
+          </li>
+          <li>
+            <a class="button" href="#contact"><span>Contact</span></a>
+          </li>
+        </ul>
+      </div>
     </header>
+    <button id="backToTop" class="back-to-top"><strong>↑</strong></button>
 
     <section id="Webapps">
       <h2>Webapps</h2>
       <div class="project">
         <h3>Financial Analysis Software</h3>
         <a href="https://github.com/OConnorThomas/Honors_Project">
-          <img
-            src="repo/images/FAS.png"
-            alt="FAS Logo"
-            class="clickable-image"
-          />
+          <img src="repo/images/FAS.png" alt="FAS Logo" class="clickable-image" />
         </a>
         <p>
           Honors Project • Capstone Project 2024 • UMass Lowell <br />
-          Neural Network predicting future stock prices trained on reported SEC
-          filings and financial statement ratios. <br />
+          Neural Network predicting future stock prices trained on reported SEC filings and
+          financial statement ratios. <br />
           Built using HTML, CSS, Python, Tensorflow and Javascript.
         </p>
         <button
@@ -103,10 +120,7 @@
           Algorithmic predictive writer, Regex log parsing, and more! <br />
           Get the archive of my <u>source code</u> and development logs below:
         </p>
-        <button
-          class="button"
-          onclick="location.href='repo/apps/Comp4Proj.zip'"
-        >
+        <button class="button" onclick="location.href='repo/apps/Comp4Proj.zip'">
           <span>Download Archive Here</span>
         </button>
       </div>
@@ -131,39 +145,27 @@
           onclick="openPopup('repo\\images\\Zillow_AI.png', this.alt)"
         />
         <p>
-          Machine Learning • Artificial Intelligence • Spring 2024 • UMass
-          Lowell <br />
+          Machine Learning • Artificial Intelligence • Spring 2024 • UMass Lowell <br />
           My implementations of Python coursework. <br />
           Includes my interactive Monte Carlo Stock Simulator. <br />
-          Command line image recognition system using a Neural Network and the
-          CIFAR-10 dataset.<br />
-          Jupyter Notebook for processing Zillow home listings, predicitng lead
-          level.<br />
+          Command line image recognition system using a Neural Network and the CIFAR-10 dataset.<br />
+          Jupyter Notebook for processing Zillow home listings, predicitng lead level.<br />
           Get the archive of my <u>source codes</u> and development logs below:
           <br />
         </p>
         <ul>
           <li>
-            <button
-              class="button"
-              onclick="location.href='repo/apps/Image_Processor.zip'"
-            >
+            <button class="button" onclick="location.href='repo/apps/Image_Processor.zip'">
               <span>Image Processor</span>
             </button>
           </li>
           <li>
-            <button
-              class="button"
-              onclick="location.href='repo/apps/Trend_Simulator.zip'"
-            >
+            <button class="button" onclick="location.href='repo/apps/Trend_Simulator.zip'">
               <span>Trend Simulator</span>
             </button>
           </li>
           <li>
-            <button
-              class="button"
-              onclick="location.href='repo/apps/Zillow_Lead.zip'"
-            >
+            <button class="button" onclick="location.href='repo/apps/Zillow_Lead.zip'">
               <span>Zillow-Lead Notebook</span>
             </button>
           </li>
@@ -200,18 +202,12 @@
         </p>
         <ul>
           <li>
-            <button
-              class="button"
-              onclick="location.href='repo/apps/Pacman.zip'"
-            >
+            <button class="button" onclick="location.href='repo/apps/Pacman.zip'">
               <span>Download Pacman</span>
             </button>
           </li>
           <li>
-            <button
-              class="button"
-              onclick="location.href='repo/apps/Snake.zip'"
-            >
+            <button class="button" onclick="location.href='repo/apps/Snake.zip'">
               <span>Download Snake</span>
             </button>
           </li>
@@ -232,13 +228,10 @@
         />
         <p>
           Blackjack game for up to 4 players.<br />
-          Simulates all aspects of the game, including hit/stand, double downs,
-          surrenders, splits, and insurance.
+          Simulates all aspects of the game, including hit/stand, double downs, surrenders, splits,
+          and insurance.
         </p>
-        <button
-          class="button"
-          onclick="location.href='repo/apps/Blackjack.zip'"
-        >
+        <button class="button" onclick="location.href='repo/apps/Blackjack.zip'">
           <span>Download Blackjack</span>
         </button>
       </div>
@@ -248,11 +241,7 @@
     <section id="contact">
       <h2>Contact</h2>
       <a href="https://www.linkedin.com/in/oconnordthomas/">
-        <img
-          class="profile-pic"
-          src="repo/images/Thomas-Headshot.jpg"
-          alt="User Profile picture"
-        />
+        <img class="profile-pic" src="repo/images/Thomas-Headshot.jpg" alt="User Profile picture" />
       </a>
       <ul>
         <li>
@@ -300,21 +289,17 @@
     </section>
 
     <footer>
-      &copy;
+      Copyright &copy;
       <script type="text/javascript">
         document.write(new Date().getFullYear());
       </script>
-      Thomas O'Connor. All rights reserved.
+      Thomas O'Connor – All Rights Reserved.
     </footer>
 
     <div id="popup-modal" class="modal">
       <span class="close" onclick="closePopup()">&times;</span>
       <img id="popup-image" class="modal-content" />
-      <iframe
-        id="popup-pdf"
-        class="modal-content"
-        style="display: none"
-      ></iframe>
+      <iframe id="popup-pdf" class="modal-content" style="display: none"></iframe>
       <div id="caption"></div>
     </div>
 
