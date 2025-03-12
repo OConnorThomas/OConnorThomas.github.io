@@ -219,17 +219,35 @@
         </ul>
       </div>
       <div class="project">
-        <h3>Blackjack Terminal Game</h3>
+        <h3>Blackjack Terminal Game, RL Model</h3>
         <img
           src="repo\images\Blackjack.gif"
           alt="Blackjack Gif"
           class="clickable-image"
           onclick="openPopup('repo\\images\\Blackjack.gif', this.alt)"
         />
+        <img
+          src="repo\images\zero_aces_table_model.png"
+          alt="Breakdown of each blackjack case, based on dealer's card and visible total @ zero aces."
+          class="clickable-image"
+          onclick="openPopup('repo\\images\\zero_aces_table_model.png', this.alt)"
+        />
+        <img
+          src="repo\images\optimal_action_heatmaps.png"
+          alt="Grid of optimal moves found in each case. Aces > 3 binned together."
+          class="clickable-image"
+          onclick="openPopup('repo\\images\\optimal_action_heatmaps.png', this.alt)"
+        />
+
         <p>
           Blackjack game for up to 4 players.<br />
           Simulates all aspects of the game, including hit/stand, double downs, surrenders, splits,
           and insurance.
+        </p>
+        <p>
+          Blackjack RL with table lookup to determine ideal outcomes in blackjack hands.
+          <br />
+          Generates visualizations of table findings.
         </p>
         <button class="button" onclick="location.href='repo/apps/Blackjack.zip'">
           <span>Download Blackjack</span>
