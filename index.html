@@ -176,6 +176,55 @@
     <section id="games">
       <h2>Games</h2>
       <div class="project">
+        <h3>Blackjack Terminal Game, RL Model</h3>
+        <img
+          src="repo\images\Blackjack.gif"
+          alt="Blackjack Gif"
+          class="clickable-image"
+          onclick="openPopup('repo\\images\\Blackjack.gif', this.alt)"
+        />
+        <img
+          src="repo\images\zero_aces_table_model.png"
+          alt="Breakdown of each blackjack case, based on dealer's card and visible total @ zero aces."
+          class="clickable-image"
+          onclick="openPopup('repo\\images\\zero_aces_table_model.png', this.alt)"
+        />
+        <img
+          src="repo\images\optimal_action_heatmaps.png"
+          alt="Grid of optimal moves found in each case. Aces > 3 binned together."
+          class="clickable-image"
+          onclick="openPopup('repo\\images\\optimal_action_heatmaps.png', this.alt)"
+        />
+
+        <p>
+          Blackjack game for up to 4 players.<br />
+          Simulates all aspects of the game, including hit/stand, double downs, surrenders, splits,
+          and insurance.
+        </p>
+        <p>
+          Blackjack RL with table lookup to determine ideal player actions in blackjack hands.
+          <br />
+          Implements a state-transition logging system for weighing intermediate and terminal
+          outcomes.
+          <br />
+          Expanded main game with algorithmic suggestions, stripped training and query models.
+          <br />
+          Generates visualizations of table findings.
+        </p>
+        <ul>
+          <li>
+            <button class="button" onclick="location.href='repo/apps/Blackjack.zip'">
+              <span>Download Blackjack</span>
+            </button>
+          </li>
+          <li>
+            <button class="button" onclick="location.href='repo/apps/Blackjack_RL.zip'">
+              <span>Blackjack_RL Archive</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="project">
         <h3>Pacman, Snake, Pong Replicas : C++</h3>
         <img
           src="repo\images\Pacman.gif"
@@ -217,41 +266,6 @@
             </button>
           </li>
         </ul>
-      </div>
-      <div class="project">
-        <h3>Blackjack Terminal Game, RL Model</h3>
-        <img
-          src="repo\images\Blackjack.gif"
-          alt="Blackjack Gif"
-          class="clickable-image"
-          onclick="openPopup('repo\\images\\Blackjack.gif', this.alt)"
-        />
-        <img
-          src="repo\images\zero_aces_table_model.png"
-          alt="Breakdown of each blackjack case, based on dealer's card and visible total @ zero aces."
-          class="clickable-image"
-          onclick="openPopup('repo\\images\\zero_aces_table_model.png', this.alt)"
-        />
-        <img
-          src="repo\images\optimal_action_heatmaps.png"
-          alt="Grid of optimal moves found in each case. Aces > 3 binned together."
-          class="clickable-image"
-          onclick="openPopup('repo\\images\\optimal_action_heatmaps.png', this.alt)"
-        />
-
-        <p>
-          Blackjack game for up to 4 players.<br />
-          Simulates all aspects of the game, including hit/stand, double downs, surrenders, splits,
-          and insurance.
-        </p>
-        <p>
-          Blackjack RL with table lookup to determine ideal outcomes in blackjack hands.
-          <br />
-          Generates visualizations of table findings.
-        </p>
-        <button class="button" onclick="location.href='repo/apps/Blackjack.zip'">
-          <span>Download Blackjack</span>
-        </button>
       </div>
       <!-- Repeat for more games -->
     </section>
