@@ -1,0 +1,503 @@
+.title {
+  color: var(--text-color);
+  z-index: 5;
+}
+
+header {
+  height: 25vh;
+  border-radius: 0 0 3vw 3vw;
+  background: var(--head-foot-color);
+  color: var(--text-color);
+  text-align: center;
+  padding-bottom: 2vh;
+  position: relative;
+  z-index: 1;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--head-foot-color);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+header h1 {
+  margin: 0;
+  color: var(--text-color);
+  padding: 1vw;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* Keep list centered */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.2vw; /* Replace individual li margins */
+  margin-top: -2vh;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-list li {
+  margin: 0 0.2vw;
+}
+
+/* Menu Icon Styles */
+.menu-icon {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 5vh;
+  height: 3vh;
+  position: absolute;
+  left: 3vh; /* Right-aligned */
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 2vh;
+  cursor: pointer;
+  background-color: var(--background-color);
+  border-radius: 1vh;
+}
+
+.menu-icon:hover {
+  background-color: var(--head-foot-color);
+}
+
+.menu-icon .bar {
+  width: 3vh;
+  height: 3px;
+  background-color: var(--mycolor);
+  border-radius: 3px;
+}
+
+/* Popup Menu Styles */
+.popup-menu {
+  display: none; /* Hidden by default */
+  position: relative;
+  top: 13vh; /* Position just below the header */
+  left: 0vh;
+  width: fit-content; /* Shrinks the ul to fit the largest li */
+  height: auto; /* Adjust the height to fit the screen minus the header height */
+  background-color: var(--head-foot-color);
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-100%); /* Initially offscreen above */
+  border-radius: 0 0 7vh 2vh;
+  z-index: -1;
+}
+
+.popup-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-menu li {
+  margin: 1vh;
+  text-align: center;
+  display: flex;
+  width: auto;
+}
+
+@media (max-aspect-ratio: 1.25/1) {
+  .nav-list {
+    display: none; /* Hide the navigation links */
+  }
+
+  .menu-icon {
+    display: flex; /* Show the menu icon */
+  }
+
+  header {
+    height: 12vh;
+  }
+  
+  .title{
+    display: none;
+  }
+}
+
+li {
+  display: inline-block;
+  margin: 0 0.2vw;
+}
+
+.header-pic {
+  border-radius: 50%;
+  border: 0.4vh solid var(--mycolor);
+  height: min(12vh, 12vw);
+  transition: border 0.3s ease;
+
+  overflow: hidden; /* Required for pseudo-elements */
+  /* Modify position properties */
+  position: absolute;
+  right: 5vh; /* Match header padding */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Apply the pulse effect on hover */
+.header-pic:hover {
+  animation: borderAnimation 0.8s infinite;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+p {
+  font-size: 3vh;
+  color: var(--text-color);
+  transition: color 0.3s;
+  padding: 0 2vh;
+}
+
+section {
+  padding: 0 1.2vh;
+  margin: 1.2vh 1.2vh;
+  text-align: center;
+}
+
+h1 {
+  font-size: min(7vh, 7vw);
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+h2 {
+  font-size: 5vh;
+  color: var(--text-color);
+  transition: color 0.3s;
+  margin: 1vh;
+}
+
+h3 {
+  font-size: 4vh;
+  color: var(--text-color);
+  transition: color 0.3s;
+  margin: 0 0 2vh 0 ;
+}
+
+ul {
+  font-size: 5vh;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+footer {
+  font-size: 2vh;
+  border-radius: 3vw 3vw 0 0;
+  background: var(--head-foot-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 2vh;
+  position: relative;
+  bottom: 0;
+}
+
+.project {
+  border-radius: 3vw;
+  background: var(--section-color);
+  padding: 2vh 0.2vh;
+  margin-bottom: 1vh;
+}
+
+.project img {
+  max-width: 100%;
+}
+
+.profile-pic {
+  border-radius: 50%; /* This will make it round, assuming the image is a square */
+  border: 0.4vh solid var(--mycolor); /* Border color */
+  display: block;
+  margin: 0 auto; /* Center the image in its container */
+  position: relative; /* Required for pseudo-elements */
+  overflow: hidden; /* Required for pseudo-elements */
+  transition: border 0.3s ease; /* Smooth transition for border color change */
+  height: 27vh;
+}
+
+/* Keyframes for the pulsing effect on border */
+@keyframes borderAnimation {
+  0% {
+    border-color: var(--mycolor);
+  }
+  50% {
+    border-color: var(--text-color); /* White pulse */
+  }
+  100% {
+    border-color: var(--mycolor);
+  }
+}
+
+/* Apply the pulse effect on hover */
+.profile-pic:hover {
+  animation: borderAnimation 0.8s infinite;
+}
+
+/* Button Styling */
+.button {
+  padding: 1.2vh 2.5vh;
+  font-size: 3.5vh;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  min-width: 15vh;
+  color: white; /* Default text color */
+  background-image: radial-gradient(circle, #000000 20%, var(--mycolor) 100%);
+  transition: background-image 0.3s, color 0.3s;
+  border-radius: 1vh; /* Rounded corners */
+  position: relative; /* Required for pseudo-elements */
+  overflow: hidden; /* Required for pseudo-elements */
+}
+
+/* Pseudo-element for the animated pulse effect */
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, #444444 20%, var(--mycolor) 100%);
+  opacity: 0;
+  border-radius: 0.5vw; /* Rounded corners */
+  transition: opacity 0.3s;
+  z-index: 0;
+}
+
+/* Text inside the button to ensure it's above the pseudo-element */
+.button span {
+  position: relative;
+  z-index: 1;
+}
+
+
+.back-to-top {
+  position: fixed;
+  bottom: -6vh; /* Initially hidden below the screen */
+  right: 2vh;
+  width: min(10vh, 20vw);
+  height: min(10vh, 20vw);
+  background-color: var(--mycolor);
+  color: white;
+  border: none;
+  border-radius: 2vh;
+  font-size: min(4vh, 6vw);
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+@keyframes top_hover {
+  0% {
+    background-color: var(--mycolor);
+  }
+  50% {
+    background-color: var(--section-color);
+  }
+  100% {
+    background-color: var(--mycolor);
+  }
+}
+
+.back-to-top:hover {
+  animation: top_hover 0.8s infinite
+  
+}
+
+.back-to-top.show {
+  bottom: 2vh; /* Moves it up into view */
+  opacity: 1;
+}
+
+/* Keyframes for the pulsing effect */
+@keyframes pulseAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 0.3; /* Less visible start */
+  }
+  50% {
+    transform: scale(1); /* More significant scaling */
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.3; /* Back to less visible */
+  }
+}
+
+.button:hover::after {
+  opacity: 1; /* Show the pseudo-element */
+  animation: pulseAnimation 0.8s infinite; /* animation */
+}
+
+.clickable-image {
+  height: 23vh;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.clickable-image:hover {
+  opacity: 0.7;
+}
+
+.contact-logo {
+  height: 10vh;
+  margin-top: 2vh;
+  transition: 0.3s;
+}
+
+.contact-logo:hover {
+  opacity: 0.7;
+}
+
+.label{
+  font-size: 2.5vh;
+  margin-top: -2.5vh;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  padding-top: 10vh; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90vw;
+  max-height: 80vh;
+  width: 90vw;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 84vw;
+  text-align: center;
+  color: #ccc;
+  padding: 1.2vh 0;
+  font-size: 3vh;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.5s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 1.8vh;
+  right: 4.2vh;
+  color: #f1f1f1;
+  font-size: 4.8vh;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsive Columns - Stacked on Small Screens */
+@media only screen and (max-width: 84vw) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/* Styles for PDF iframe */
+#popup-pdf {
+  width: 90vw;
+  height: 90vh;
+  display: none;
+  border: none;
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 0 gold);
+  }
+  50% {
+    filter: drop-shadow(0 0 0.8vh gold);
+  }
+  100% {
+    filter: drop-shadow(0 0 0 gold);
+  }
+}
+
+.glow-effect {
+  position: relative;
+  animation: glow 2.5s infinite;
+}
+
+/* Adding a glowing background behind the transparent PNG */
+.glow-effect::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 0, 0.8) 0%,
+    rgba(255, 215, 0, 0) 70%
+  );
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 50%;
+  animation: glow 2.5s infinite;
+}

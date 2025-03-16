@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sandbox</title>
+    <link rel="icon" href="repo/images/Thomas-Headshot.jpg" type="Thomas-Headshot.jpg" />
+    <link rel="stylesheet" href="repo/css/test.css" />
+    <link rel="stylesheet" href="repo/css/common.css" />
+  </head>
+  <body class="noscroll">
+    <header>
+      <h1 class="title">
+        <a href="index.html">Sandbox</a>
+      </h1>
+    </header>
+
+    <button id="backToTop" class="back-to-top"><strong>↑</strong></button>
+
+    <section>
+      <img
+        src="repo\images/grain_shader_thumbnail.jpg"
+        class="clickable-image"
+        alt="Sample Gradient Shader"
+        onclick="openPopup('repo\\images\\grain_shader_thumbnail.jpg', this.alt)"
+      />
+    </section>
+
+    <footer>
+      Copyright &copy;
+      <script type="text/javascript">
+        document.write(new Date().getFullYear());
+      </script>
+      Thomas O'Connor – All Rights Reserved.
+    </footer>
+
+    <div id="popup-modal" class="modal">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <img id="popup-image" class="modal-content" />
+      <iframe id="popup-pdf" class="modal-content" style="display: none"></iframe>
+      <div id="caption"></div>
+    </div>
+
+    <script src="repo/js/index.js"></script>
+    <script src="repo/js/theme.js"></script>
+    <script src="repo/js/popup.js"></script>
+  </body>
+</html>

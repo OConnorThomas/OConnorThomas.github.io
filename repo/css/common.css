@@ -1,0 +1,45 @@
+:root {
+  --mycolor: #750000; /* You can set this to any color you want */
+  --background-color: #e6e6e6; /* Default light gray */
+  --text-color: #000000;
+  --section-color: #111111;
+  --head-foot-color: #cccccc;
+}
+
+.my-color {
+  color: var(--mycolor);
+}
+
+/* Apply smooth scrolling globally */
+html {
+  scroll-behavior: smooth;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500; /* Medium */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  transition: background-color 0.3s; /* Smooth transition for color change */
+}
+
+.noscroll {
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.noscroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
