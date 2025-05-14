@@ -1,0 +1,9 @@
+I want to create a grain shaded gradient effect in html/css.
+I have done this process in another software, and I apply the following steps:
+1. convert content to black and white using an adjustment layer
+2. apply a posterize adjustment layer to bin colors into n groups (usually 3-5)
+3. add reticulation noise filter for a clean noise pattern
+4. adjust gamma to midpoint peak of values for even bias of white, black, and gray values
+5. adjust reticulation noise filter opacity to between 20 and 40 percent opacity
+
+What would this look like in html/css? Can you give me an example and a sample of your output?
