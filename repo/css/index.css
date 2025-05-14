@@ -42,6 +42,9 @@ ul {
   flex-wrap: wrap;
   gap: 0.2vw; /* Replace individual li margins */
   margin-top: -2vh;
+  font-size: 5vh;
+  color: var(--text-color);
+  transition: color 0.3s;
 }
 
 .nav-list {
@@ -49,10 +52,6 @@ ul {
   padding: 0;
   margin: 0;
   display: flex;
-}
-
-.nav-list li {
-  margin: 0 0.2vw;
 }
 
 /* Menu Icon Styles */
@@ -126,15 +125,15 @@ ul {
   header {
     height: 12vh;
   }
-  
-  .title{
+
+  .title {
     display: none;
   }
 }
 
 li {
   display: inline-block;
-  margin: 0 0.2vw;
+  margin: 0 0.8vw;
 }
 
 .header-pic {
@@ -192,13 +191,7 @@ h3 {
   font-size: 4vh;
   color: var(--text-color);
   transition: color 0.3s;
-  margin: 0 0 2vh 0 ;
-}
-
-ul {
-  font-size: 5vh;
-  color: var(--text-color);
-  transition: color 0.3s;
+  margin: 0 0 2vh 0;
 }
 
 footer {
@@ -254,7 +247,7 @@ footer {
 
 /* Button Styling */
 .button {
-  padding: 1.2vh 2.5vh;
+  padding: 1.2vh 3vh;
   font-size: 3.5vh;
   border: none;
   outline: none;
@@ -288,7 +281,6 @@ footer {
   position: relative;
   z-index: 1;
 }
-
 
 .back-to-top {
   position: fixed;
@@ -325,8 +317,7 @@ footer {
 }
 
 .back-to-top:hover {
-  animation: top_hover 0.8s infinite
-  
+  animation: top_hover 0.8s infinite;
 }
 
 .back-to-top.show {
@@ -375,7 +366,7 @@ footer {
   opacity: 0.7;
 }
 
-.label{
+.label {
   font-size: 2.5vh;
   margin-top: -2.5vh;
 }
@@ -491,11 +482,7 @@ footer {
   left: 50%;
   width: 120%;
   height: 120%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 215, 0, 0.8) 0%,
-    rgba(255, 215, 0, 0) 70%
-  );
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.8) 0%, rgba(255, 215, 0, 0) 70%);
   transform: translate(-50%, -50%);
   z-index: -1;
   border-radius: 50%;

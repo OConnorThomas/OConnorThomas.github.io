@@ -49,6 +49,5 @@ menuIcon.addEventListener('click', () => {
   }
 });
 
-
 // Close the popup menu when the viewport resizes
 window.addEventListener('resize', closePopupMenu);
