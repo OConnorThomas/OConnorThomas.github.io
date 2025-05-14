@@ -51,3 +51,14 @@ menuIcon.addEventListener('click', () => {
 
 // Close the popup menu when the viewport resizes
 window.addEventListener('resize', closePopupMenu);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const icons = document.querySelectorAll(".contact-icons li");
+  const total = icons.length;
+
+  icons.forEach((icon, index) => {
+    // Reverse the delay: last icon gets 0s, second-to-last gets 0.05s, etc.
+    const delay = (total - index - 1) * 0.08;
+    icon.style.transitionDelay = `${delay}s`;
+  });
+});

@@ -5,10 +5,10 @@ function updateBackgroundColor() {
   // const isDaytime = false;
   
   // Set background color to a lighter shade during the day and a darker shade during the night
-  const backgroundColor = isDaytime ? '#e6e6e6' : '#222222'; // Light gray for day, darker gray for night
+  const backgroundColor = isDaytime ? '#e6e6f0' : '#222230'; // Light gray for day, darker gray for night
   const textColor = isDaytime ? '#000000' : '#ffffff';
-  const sectionColor = isDaytime ? '#ffffff' : '#111111';
-  const headfootColor = isDaytime ? '#bbbbbb' : '#111111';
+  const sectionColor = isDaytime ? '#cdcdde' : '#111111';
+  const headfootColor = isDaytime ? '#aaaabb' : '#0b0b0b';
   document.documentElement.style.setProperty('--section-color', sectionColor);
   document.documentElement.style.setProperty('--background-color', backgroundColor);
   document.documentElement.style.setProperty('--text-color', textColor);

@@ -293,52 +293,50 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <a href="https://www.linkedin.com/in/oconnordthomas/">
-        <img class="profile-pic" src="repo/images/Thomas-Headshot.jpg" alt="User Profile picture" />
-      </a>
-      <ul>
-        <li>
-          <a href="mailto:oconnordthomas@gmail.com">
-            <img src="repo\images\email_logo.png" class="contact-logo" />
-            <br />
-            <div class="label">Email</div>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/oconnordthomas/">
-            <img src="repo\images\linkedin_logo.png" class="contact-logo" />
-            <br />
-            <div class="label">LinkedIn</div>
-          </a>
-        </li>
-        <li>
-          <a href="tel:+19782305349">
-            <img src="repo\images\phone_logo.png" class="contact-logo" />
-            <br />
-            <div class="label">Phone</div>
-          </a>
-        </li>
-        <li>
-          <img
-            src="repo/images/resume_logo.png"
-            class="contact-logo"
-            alt="My Resume - February 2025"
-            onclick="openPdf('repo/docs/Thomas O\'Connor Resume Feb 2025.pdf', this.alt)"
-          />
-          <br />
-          <div class="label">Resume</div>
-        </li>
-        <li>
-          <img
-            src="repo\images/diploma_logo.png"
-            class="contact-logo"
-            alt="My UMass Lowell Diploma - 2025"
-            onclick="openPopup('repo\\images\\framed_diploma.png', this.alt, true)"
-          />
-          <br />
-          <div class="label">Diploma</div>
-        </li>
-      </ul>
+      <div class="contact-container">
+        <div class="profile-pic-wrapper">
+          <img class="profile-pic" src="repo/images/Thomas-Headshot.jpg" alt="Thomas' Headshot" />
+        </div>
+
+        <ul class="contact-icons">
+          <li>
+            <a href="mailto:oconnordthomas@gmail.com">
+              <img src="repo/images/email_logo.png" class="contact-logo" />
+              <div class="label">Email</div>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/oconnordthomas/">
+              <img src="repo/images/linkedin_logo.png" class="contact-logo" />
+              <div class="label">LinkedIn</div>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+19782305349">
+              <img src="repo/images/phone_logo.png" class="contact-logo" />
+              <div class="label">Phone</div>
+            </a>
+          </li>
+          <li>
+            <img
+              src="repo/images/resume_logo.png"
+              class="contact-logo"
+              alt="My Resume - February 2025"
+              onclick="openPdf('repo/docs/Thomas O\'Connor Resume Feb 2025.pdf', this.alt)"
+            />
+            <div class="label">Resume</div>
+          </li>
+          <li>
+            <img
+              src="repo/images/diploma_logo.png"
+              class="contact-logo"
+              alt="My UMass Lowell Diploma - 2025"
+              onclick="openPopup('repo/images/framed_diploma.png', this.alt, true)"
+            />
+            <div class="label">Diploma</div>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <footer>
