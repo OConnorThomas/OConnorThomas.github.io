@@ -242,8 +242,8 @@ footer {
   display: flex;
   gap: 2vw;
   opacity: 0;
-  transition: transform 0.6s ease, opacity 0.3s ease;
-  z-index: -1;
+  transition: transform 0.6s ease, opacity 0.2s ease;
+  z-index: 1;
 }
 
 /* On hover, shift picture left and show icons to the right */
