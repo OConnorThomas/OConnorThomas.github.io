@@ -3,6 +3,10 @@
   z-index: 5;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header {
   height: 25vh;
   border-radius: 0 0 3vw 3vw;
@@ -202,7 +206,7 @@ footer {
   text-align: center;
   padding: 2vh;
   position: relative;
-  bottom: 0;
+  bottom: -1vw;
 }
 
 .project {
@@ -560,4 +564,222 @@ footer {
   z-index: -1;
   border-radius: 50%;
   animation: glow 2.5s infinite;
+}
+
+.project-inner {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: auto;
+  min-height: 300px;
+  transition: all 0.8s ease;
+}
+
+/* Shared transition behavior */
+.logo-section,
+.details-section {
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* Initial states */
+.logo-section {
+  flex: 1;
+  padding: 1rem;
+  transform: translateX(25vw); /* Start centered */
+  opacity: 1;
+}
+
+.details-section {
+  flex: 1;
+  transform: translateX(10vw);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Logo image */
+.logo-image {
+  width: 150px;
+  height: auto;
+  margin-top: 1rem;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.gallery-image {
+  height: 8vw;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+  border-radius: 0.5vh;
+  border: 0.2vh solid var(--text-color);
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+.reveal {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+
+.third-section {
+  width: 100%;
+  opacity: 0;
+  transform: translateX(40vw); /* Initially pushed right */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  pointer-events: none;
+}
+
+.project:hover .third-section {
+  opacity: 1;
+  transform: translateX(0); /* Slide into view */
+  pointer-events: auto;
+}
+
+.third-section ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.third-section li {
+  display: inline-block;
+}
+
+/* Show everything on hover */
+.project:hover .logo-section {
+  transform: translateX(-3vw);
+  opacity: 1;
+}
+
+.project:hover .details-section {
+  transform: translateX(-3vw);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.project:hover .reveal {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-aspect-ratio: 1.25/1) {
+  .project-inner {
+    flex-direction: column;
+    align-items: center;
+    transform: none !important;
+    transition: none !important;
+    overflow: visible;
+  }
+
+  .logo-section,
+  .details-section {
+    transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .gallery {
+    justify-content: center;
+  }
+
+  .logo-image,
+  .gallery-image {
+    width: 90%;
+    height: auto;;
+  }
+
+  .view-repo-button {
+    margin-top: 1rem;
+  }
+
+  .third-section {
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .third-section ul {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .reveal {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.portrait-only {
+  display: none;
+}
+
+/* Portrait mode only */
+@media (max-aspect-ratio: 1.25/1) {
+  .portrait-only {
+    display: block;
+    width: 100%;
+  }
+
+  .gallery-wrapper {
+    margin-top: 1rem;
+  }
+
+  .gallery-header h3.gallery-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .left-label {
+    flex: 0 0 auto;
+    text-align: left;
+  }
+
+  .divider-line {
+    flex: 1 1 auto;
+    border-top: 0.2vh solid var(--text-color);
+    margin: 0 1rem;
+  }
+
+  .toggle-icon {
+    flex: 0 0 auto;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-collapsible {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .gallery-wrapper.open .gallery-collapsible {
+    max-height: 1000px; /* Enough to show all images */
+  }
+
+  .gallery-wrapper.open .toggle-icon {
+    transform: rotate(180deg); /* Flip arrow */
+  }
 }

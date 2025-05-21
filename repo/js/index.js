@@ -62,3 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
     icon.style.transitionDelay = `${delay}s`;
   });
 });
+
+function toggleGallery(headerElement) {
+  const wrapper = headerElement.closest('.gallery-wrapper');
+  wrapper.classList.toggle('open');
+}
