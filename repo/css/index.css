@@ -776,7 +776,7 @@ footer {
   }
 
   .gallery-wrapper.open .gallery-collapsible {
-    max-height: 1000px; /* Enough to show all images */
+    max-height: 300vh; /* Enough to show all images */
   }
 
   .gallery-wrapper.open .toggle-icon {
