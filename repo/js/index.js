@@ -18,8 +18,19 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".project.active").forEach((project) => {
       project.classList.remove("active");
     });
+
+    // Collapse all open gallery-wrapper elements
+    document.querySelectorAll(".gallery-wrapper.open").forEach((wrapper) => {
+      wrapper.classList.remove("open");
+
+      // Update toggle icon to ↓
+      const icon = wrapper.querySelector(".toggle-icon");
+      if (icon) icon.textContent = "↓";
+    });
   });
 });
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const title = document.getElementById("expandAllProjects");
