@@ -1,6 +1,7 @@
 .title {
   color: var(--text-color);
   z-index: 5;
+  cursor: pointer;
 }
 
 body {
@@ -585,7 +586,7 @@ footer {
 .logo-section {
   flex: 1;
   padding: 1rem;
-  transform: translateX(25vw); /* Start centered */
+  transform: translateX(23.8vw); /* Start centered */
   opacity: 1;
 }
 
@@ -642,7 +643,7 @@ footer {
   pointer-events: none;
 }
 
-.project:hover .third-section {
+.project.active .third-section {
   opacity: 1;
   transform: translateX(0); /* Slide into view */
   pointer-events: auto;
@@ -661,20 +662,25 @@ footer {
   display: inline-block;
 }
 
-/* Show everything on hover */
-.project:hover .logo-section {
+.project.active .logo-section {
   transform: translateX(-3vw);
   opacity: 1;
 }
 
-.project:hover .details-section {
+.project.active .details-section {
   transform: translateX(-3vw);
   opacity: 1;
   pointer-events: auto;
 }
 
-.project:hover .reveal {
+.project.active .reveal {
   opacity: 1;
+  pointer-events: auto;
+}
+
+.project.active .third-section {
+  opacity: 1;
+  transform: translateX(0);
   pointer-events: auto;
 }
 
@@ -704,7 +710,7 @@ footer {
   .logo-image,
   .gallery-image {
     width: 90%;
-    height: auto;;
+    height: auto;
   }
 
   .view-repo-button {
@@ -727,6 +733,10 @@ footer {
   .reveal {
     opacity: 1;
     pointer-events: auto;
+  }
+
+  .clickable-image {
+    pointer-events: none;
   }
 }
 

@@ -11,9 +11,40 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   backToTopButton.addEventListener("click", function () {
+    // Smooth scroll to top
     window.scrollTo({ top: 0, behavior: "smooth" });
+
+    // Collapse all .project elements
+    document.querySelectorAll(".project.active").forEach((project) => {
+      project.classList.remove("active");
+    });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const title = document.getElementById("expandAllProjects");
+
+  title.addEventListener("click", function () {
+    const projects = document.querySelectorAll(".project");
+    let atLeastOneClosed = false;
+
+    projects.forEach(project => {
+      if (!project.classList.contains("active")) {
+        atLeastOneClosed = true;
+      }
+    });
+
+    projects.forEach(project => {
+      if (atLeastOneClosed) {
+        project.classList.add("active");  // Expand all
+      } else {
+        project.classList.remove("active"); // Collapse all
+      }
+    });
+  });
+});
+
+
 
 // Get the menu icon, popup menu, and header
 const menuIcon = document.getElementById('menu-icon');
@@ -66,4 +97,9 @@ document.addEventListener("DOMContentLoaded", () => {
 function toggleGallery(headerElement) {
   const wrapper = headerElement.closest('.gallery-wrapper');
   wrapper.classList.toggle('open');
+}
+
+function toggleProject(element) {
+  const project = element.closest('.project');
+  project.classList.toggle('active');
 }

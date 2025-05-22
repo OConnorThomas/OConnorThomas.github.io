@@ -11,9 +11,7 @@
   </head>
   <body class="noscroll">
     <header>
-      <h1 class="title">
-        <a href="#contact">Thomas O'Connor's Portfolio</a>
-      </h1>
+      <h1 class="title" id="expandAllProjects">Thomas O'Connor's Portfolio</h1>
       <ul class="nav-list">
         <li>
           <a class="button" href="#Webapps"><span>Webapps</span></a>
@@ -68,7 +66,7 @@
           <div class="logo-section">
             <h3 class="project-title">Financial Analysis Software</h3>
             <p class="project-tags"><b> Honors Capstone Project • 2024 • UMass Lowell </b></p>
-            <a href="https://github.com/OConnorThomas/Honors_Project">
+            <a href="javascript:void(0);" onclick="toggleProject(this)">
               <img src="repo/images/FAS.png" alt="FAS Logo" class="clickable-image" />
             </a>
             <br /><br />
@@ -124,11 +122,13 @@
               <b> ML/AI Courses • Spring 2024 • UMass Lowell </b>
             </p>
             <br />
-            <img
-              src="repo/images/machine-learning.png"
-              alt="Machine Learning Logo"
-              class="clickable-image"
-            />
+            <a href="javascript:void(0);" onclick="toggleProject(this)">
+              <img
+                src="repo/images/machine-learning.png"
+                alt="Machine Learning Logo"
+                class="clickable-image"
+              />
+            </a>
           </div>
 
           <div class="details-section">
@@ -199,8 +199,11 @@
           <div class="logo-section">
             <h3 class="project-title">C++ Undergrad Course Portfolio</h3>
             <p class="project-tags"><b> Computing 4 • Spring 2023 • UMass Lowell </b></p>
-            <img src="repo/images/cpp_logo.png" alt="C++ Logo" class="clickable-image" />
-            <br /><br />
+            <a href="javascript:void(0);" onclick="toggleProject(this)">
+              <img src="repo/images/cpp_logo.png" alt="C++ Logo" class="clickable-image" />
+            </a>
+            <br />
+            <br />
             <button class="button reveal" onclick="location.href='repo/apps/Comp4Proj.zip'">
               <span>Download Archive Here</span>
             </button>
@@ -282,11 +285,13 @@
             <p class="project-tags">
               <b> Game Theory • Systems Analysis • Optimization • 2025 </b>
             </p>
-            <img
-              src="repo/images/Blackjack_RL.png"
-              alt="Blackjack_RL Logo"
-              class="clickable-image"
-            />
+            <a href="javascript:void(0);" onclick="toggleProject(this)">
+              <img
+                src="repo/images/Blackjack_RL.png"
+                alt="Blackjack_RL Logo"
+                class="clickable-image"
+              />
+            </a>
             <br />
             <br />
             <br />
@@ -357,11 +362,13 @@
             <p class="project-tags">
               <b> Data Structures • Low-level graphics • 2024 </b>
             </p>
-            <img
-              src="repo/images/game.png"
-              alt="Retro Games Logo"
-              class="clickable-image"
-            />
+            <a href="javascript:void(0);" onclick="toggleProject(this)">
+              <img
+                src="repo/images/game.png"
+                alt="Retro Games Logo"
+                class="clickable-image"
+              />
+            </a>
           </div>
 
           <div class="details-section">
