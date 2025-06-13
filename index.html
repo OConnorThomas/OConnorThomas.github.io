@@ -360,6 +360,68 @@
       <div class="project">
         <div class="project-inner">
           <div class="logo-section">
+            <h3 class="project-title">Air Traffic Control Simulator</h3>
+            <p class="project-tags">
+              <b> Dynamic Systems Management • Sprite Graphics • 2025 </b>
+            </p>
+            <a href="#" onclick="toggleProject(this); event.preventDefault();">
+              <img
+                src="repo/images/ATC_logo.png"
+                alt="ATC game Logo"
+                class="clickable-image"
+                title="Click to expand project"
+              />
+            </a>
+            <br />
+            <br />
+            <br />
+            <ul>
+              <li>
+                <button class="button reveal" onclick="location.href='repo/apps/ATC_2D.zip'">
+                  <span>Download ATC Game</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="details-section">
+            <p class="project-description">
+              2D aircraft navigation game. <br />
+              Simulates a basic scene of randomized aircraft, navigating dynamic cloud cover and wind speeds.
+            </p>
+            <p>
+              You will play as an air traffic controller, preventing collisions and ensuring safe travel.
+              When aircraft are in range, issue commands to aircraft to change direction and speeds.
+              Monitor weather and wind direction at your airport. 
+              Navigate storms and strong winds: don't let your aircraft crash!
+            </p>
+            <div class="gallery-wrapper">
+              <div class="gallery-header portrait-only" onclick="toggleGallery(this)">
+                <h3 class="gallery-toggle">
+                  <span class="left-label">Gallery</span>
+                  <span class="divider-line"></span>
+                  <span class="toggle-icon">↓</span>
+                </h3>
+              </div>
+
+              <div class="gallery-collapsible">
+                <div class="gallery">
+                  <img
+                    src="repo\images\ATC.gif"
+                    alt="ATC game Gif"
+                    class="gallery-image"
+                    onclick="openPopup('repo\\images\\ATC.gif', this.alt)"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-inner">
+          <div class="logo-section">
             <h3 class="project-title">Pacman, Snake, Pong Replicas</h3>
             <p class="project-tags">
               <b> Data Structures • Low-level graphics • 2024 </b>
