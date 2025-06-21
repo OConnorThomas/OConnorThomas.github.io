@@ -221,6 +221,10 @@ footer {
   max-width: 100%;
 }
 
+.project-tags {
+  padding: 0 7vh;
+}
+
 /* Contact container */
 .contact-container {
   position: relative;
@@ -691,6 +695,10 @@ footer {
     transform: none !important;
     transition: none !important;
     overflow: visible;
+  }
+
+  .project-tags {
+    padding: 0;
   }
 
   .logo-section,
